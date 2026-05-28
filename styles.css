@@ -82,6 +82,22 @@ a:hover { color: var(--accent-hover); }
   max-width: 800px;
   margin: 0 auto;
 }
+.hero-with-image {
+  padding-top: 2.5rem;
+}
+.hero-image-wrap {
+  margin: 0 auto 2rem;
+  max-width: 720px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(61, 47, 36, 0.18);
+  border: 1px solid var(--border);
+}
+.hero-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 .hero-tag {
   display: inline-block;
   font-size: 0.85rem;
