@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>イベント｜コトノハ</title>
+<meta name="description" content="コトノハ お試し体験会。7月26日（日）加茂文化センターでボードゲームを楽しみましょう。参加無料・要予約。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .event-info {
+    background: var(--card);
+    border: 2px solid var(--accent);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+  .event-info-row {
+    display: grid;
+    grid-template-columns: 72px 1fr;
+    border-bottom: 1px solid var(--border);
+    align-items: stretch;
+  }
+  .event-info-row:last-child { border-bottom: none; }
+  .event-label {
+    background: var(--text);
+    color: white;
+    font-size: 0.82rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.08em;
+    padding: 1rem 0;
+  }
+  .event-value {
+    padding: 0.85rem 1.1rem;
+    font-size: 0.97rem;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .event-value .note {
+    font-size: 0.82rem;
+    color: var(--text-soft);
+    margin-top: 0.1rem;
+  }
+  .map-btn {
+    display: inline-flex;
+    align-items: center;
+    background: #4285f4;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    margin-top: 1rem;
+    transition: opacity 0.2s;
+  }
+  .map-btn:hover { opacity: 0.85; color: white; }
+  .parking-note {
+    margin-top: 0.75rem;
+    font-size: 0.85rem;
+    color: var(--text-soft);
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    line-height: 1.7;
+  }
+  .parking-note strong { color: var(--accent); }
+  .parking-img-wrap {
+    margin-top: 0.75rem;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    aspect-ratio: 3/4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f5f5f5;
+  }
+  .parking-img-wrap img {
+    width: 133%;
+    height: 133%;
+    object-fit: contain;
+    transform: rotate(-90deg);
+  }
+  .game-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    margin-top: 1.25rem;
+  }
+  .game-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+  .game-card img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    display: block;
+  }
+  .game-card-body { padding: 0.6rem 0.75rem 0.75rem; }
+  .game-card-body h3 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 0.2rem;
+  }
+  .game-card-body p {
+    font-size: 0.82rem;
+    color: var(--text-soft);
+    line-height: 1.5;
+    margin: 0;
+  }
+  .flyer-link {
+    display: inline-block;
+    border: 2px solid var(--accent);
+    color: var(--accent);
+    padding: 0.7rem 1.75rem;
+    border-radius: 9999px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.2s;
+  }
+  .flyer-link:hover { background: var(--accent); color: white; }
+  .reserve-phone {
+    margin-top: 1.25rem;
+    font-size: 0.95rem;
+    color: var(--text-soft);
+  }
+  .reserve-phone strong {
+    font-size: 1.3rem;
+    color: var(--text);
+    display: block;
+    margin-top: 0.2rem;
+  }
+  .reserve-note {
+    margin-top: 0.75rem;
+    font-size: 0.82rem;
+    color: var(--text-soft);
+    line-height: 1.7;
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-brand"><span class="dot"></span>コトノハ</div>
+    <div class="nav-links">
+      <a href="index.html">ホーム</a>
+      <a href="event.html">イベント</a>
+      <a href="details.html">くわしく</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-header">
+  <h1>ボードゲーム体験会</h1>
+  <p>コトノハ、はじめの一歩。多世代で笑い合う、お試し開催です。</p>
+</div>
+
+<section class="section" style="padding-top: 0;">
+  <div class="event-info">
+    <div class="event-info-row">
+      <span class="event-label">日時</span>
+      <span class="event-value">
+        <strong>2026年7月26日（日）13:30〜15:30</strong>
+        <span class="note">※会場 13:00〜16:00</span>
+      </span>
+    </div>
+    <div class="event-info-row">
+      <span class="event-label">場所</span>
+      <span class="event-value">
+        <strong>加茂文化センター プレイルーム</strong>
+        <span class="note">京都府木津川市加茂町</span>
+      </span>
+    </div>
+    <div class="event-info-row">
+      <span class="event-label">対象</span>
+      <span class="event-value">
+        どなたでも
+        <span class="note">小学生は保護者同伴 / 60代以上のシニアの方歓迎</span>
+      </span>
+    </div>
+    <div class="event-info-row">
+      <span class="event-label">参加費</span>
+      <span class="event-value"><strong>無料</strong></span>
+    </div>
+    <div class="event-info-row">
+      <span class="event-label">定員</span>
+      <span class="event-value">
+        <strong>20名（先着順・要予約）</strong>
+        <span class="note">持ち物なし、手ぶらでOK</span>
+      </span>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top: 0;">
+  <h2>会場・アクセス</h2>
+  <p>加茂文化センター プレイルーム（京都府木津川市加茂町）</p>
+  <a class="map-btn" href="https://maps.google.com/?q=木津川市加茂文化センター" target="_blank">Googleマップで見る</a>
+
+  <h2 style="margin-top: 2rem;">駐車場のご案内</h2>
+  <div class="parking-note">
+    <strong>センター専用駐車場（北・西）</strong>をご利用ください。<br>
+    近隣の病院・月極・JAの駐車場は利用不可です（地図内×印）。
+  </div>
+  <div class="parking-img-wrap">
+    <img src="parking.jpeg" alt="駐車場案内図">
+  </div>
+</section>
+
+<section class="section" style="padding-top: 0;">
+  <h2>遊ぶゲーム（予定）</h2>
+  <p style="color: var(--text-soft); font-size: 0.95rem;">どれもルールが簡単で、初対面でもすぐ盛り上がれます。</p>
+  <div class="game-grid">
+    <div class="game-card">
+      <img src="game-ubongo.jpg" alt="ウボンゴ">
+      <div class="game-card-body">
+        <h3>ウボンゴ</h3>
+        <p>パズルでスピード勝負。</p>
+      </div>
+    </div>
+    <div class="game-card">
+      <img src="game-dobble.jpg" alt="ドブル">
+      <div class="game-card-body">
+        <h3>ドブル</h3>
+        <p>同じ絵を見つける反射神経ゲーム。</p>
+      </div>
+    </div>
+    <div class="game-card">
+      <img src="game-jenga.jpg" alt="ジェンガ">
+      <div class="game-card-body">
+        <h3>ジェンガ</h3>
+        <p>ハラハラ崩さず積み木を抜く。</p>
+      </div>
+    </div>
+    <div class="game-card">
+      <img src="game-stickstack.jpg" alt="STICK STACK">
+      <div class="game-card-body">
+        <h3>STICK STACK</h3>
+        <p>バランスを取りながら棒を積む。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top: 0;">
+  <h2>こんな雰囲気です</h2>
+  <ul class="rule-list">
+    <li>
+      <strong>あだ名で呼び合って、世代を超えてワイワイ</strong>
+      <span>おじいちゃんも、子どもも、みんなフラットに。</span>
+    </li>
+    <li>
+      <strong>勝ち負け関係なく、みんなで笑い合う時間</strong>
+      <span>競争よりも、一緒に楽しむことを大切にします。</span>
+    </li>
+    <li>
+      <strong>最後にみんなで感想シェア</strong>
+      <span>「楽しかった！」をみんなで分かち合う時間を作ります。</span>
+    </li>
+  </ul>
+</section>
+
+<div class="cta-end">
+  <h3>参加のご予約</h3>
+  <p>定員20名・先着順です。お早めにどうぞ！</p>
+  <a href="https://forms.gle/bBvpiXA9TEc5bQug6" target="_blank" class="btn">予約フォームから申し込む</a>
+  <p class="reserve-phone">
+    お電話でも受け付けています
+    <strong>090-5656-3539</strong>
+    <span style="font-size: 0.88rem;">（9:00〜20:00）</span>
+  </p>
+  <p class="reserve-note">
+    ※会場は催事と一切関係がございません<br>
+    ※会場への直接のお問い合わせはご遠慮ください
+  </p>
+  <div style="margin-top: 1.5rem; border-top: 1px solid var(--border); padding-top: 1.25rem;">
+    <p style="margin-bottom: 0.75rem; color: var(--text-soft); font-size: 0.9rem;">チラシはこちらから印刷できます</p>
+    <a href="event-flyer_1.html" target="_blank" class="flyer-link">チラシを開く（印刷用）</a>
+  </div>
+</div>
+
+<footer>
+  <div class="brand">コトノハ</div>
+  <div>京都府 木津川市</div>
+  <div style="margin-top: 0.5rem;">kotonoha.kizugawa@gmail.com</div>
+  <div style="margin-top: 0.25rem;">Instagram: @kotonoha_kizugawa</div>
+  <div style="margin-top: 0.5rem;">© 2026 コトノハ</div>
+</footer>
+
+</body>
+</html>
