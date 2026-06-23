@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>イベント｜コトノハ</title>
+<meta name="description" content="コトノハ お試し体験会。7月26日（日）加茂文化センターでボードゲームを楽しみましょう。参加無料・要予約。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .event-info {
+    background: var(--card);
+    border: 2px solid var(--accent);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+  .event-info-row {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 0;
+    border-bottom: 1px solid var(--border);
+    align-items: stretch;
+  }
+  .event-info-row:last-child { border-bottom: none; }
+  .event-label {
+    background: var(--text);
+    color: white;
+    font-size: 0.85rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.1em;
+    padding: 1rem 0;
+  }
+  .event-value {
+    padding: 0.85rem 1.25rem;
+    font-size: 1rem;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .event-value .note {
+    font-size: 0.85rem;
+    color: var(--text-soft);
+    margin-top: 0.1rem;
+  }
+  .reserve-phone {
+    margin-top: 1.25rem;
+    font-size: 0.95rem;
+    color: var(--text-soft);
+  }
+  .reserve-phone strong {
+    font-size: 1.3rem;
+    color: var(--text);
+    display: block;
+    margin-top: 0.2rem;
+  }
+  .reserve-note {
+    margin-top: 0.75rem;
+    font-size: 0.82rem;
+    color: var(--text-soft);
+    line-height: 1.7;
+  }
+  @media (max-width: 600px) {
+    .event-label { font-size: 0.78rem; }
+    .event-value { font-size: 0.95rem; padding: 0.75rem 1rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-brand"><span class="dot"></span>コトノハ</div>
+    <div class="nav-links">
+      <a href="index.html">ホーム</a>
+      <a href="event.html">イベント</a>
+      <a href="details.html">くわしく</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-header">
+  <h1>ボードゲーム体験会</h1>
+  <p>コトノハ、はじめの一歩。多世代で笑い合う、お試し開催です。</p>
+</div>
+
+<section class="section" style="padding-top: 0;">
+  <div class="event-info">
+    <div class="event-info-row">
+      <span class="event-label">日時</span>
+      <span class="event-value">
+        <strong>2026年7月26日（日）13:30〜15:30</strong>
+        <span class="note">※会場 13:00〜16:00</span>
+      </span>
+    </div>
+    <div class="event-info-row">
+      <span class="event-label">場所</span>
+      <span class="event-value">
+        <strong>加茂文化センター プレイルーム</strong>
+        <span class="note">京都府木津川市加茂町</span>
+      </span>
+    </div>
+    <div class="event-info-row">
+      <span class="event-label">対象</span>
+      <span class="event-value">
+        どなたでも
+        <span class="note">小学生は保護者同伴 / 60代以上のシニアの方歓迎</span>
+      </span>
+    </div>
+    <div class="event-info-row">
+      <span class="event-label">参加費</span>
+      <span class="event-value"><strong>無料</strong></span>
+    </div>
+    <div class="event-info-row">
+      <span class="event-label">定員</span>
+      <span class="event-value">
+        <strong>20名（先着順・要予約）</strong>
+        <span class="note">持ち物なし、手ぶらでOK</span>
+      </span>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top: 0;">
+  <h2>遊ぶゲーム（予定）</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>ウボンゴ</h3>
+      <p>パズルでスピード勝負。直感と集中力が試されます。</p>
+    </div>
+    <div class="card">
+      <h3>ドブル</h3>
+      <p>同じ絵を見つける反射神経ゲーム。年齢関係なく白熱します。</p>
+    </div>
+    <div class="card">
+      <h3>ジェンガ</h3>
+      <p>積み木をハラハラ崩さず抜く、定番の盛り上がりゲーム。</p>
+    </div>
+    <div class="card">
+      <h3>STICK STACK</h3>
+      <p>バランスを取りながら棒を積み上げる、ドキドキのゲーム。</p>
+    </div>
+  </div>
+  <p style="margin-top: 1rem; color: var(--text-soft); font-size: 0.95rem;">どれもルールが簡単で、初対面でもすぐに盛り上がれます。</p>
+</section>
+
+<section class="section" style="padding-top: 0;">
+  <h2>こんな雰囲気です</h2>
+  <ul class="rule-list">
+    <li>
+      <strong>あだ名で呼び合って、世代を超えてワイワイ</strong>
+      <span>おじいちゃんも、子どもも、みんなフラットに。</span>
+    </li>
+    <li>
+      <strong>勝ち負け関係なく、みんなで笑い合う時間</strong>
+      <span>競争よりも、一緒に楽しむことを大切にします。</span>
+    </li>
+    <li>
+      <strong>最後にみんなで感想シェア</strong>
+      <span>「楽しかった！」をみんなで分かち合う時間を作ります。</span>
+    </li>
+  </ul>
+</section>
+
+<div class="cta-end">
+  <h3>参加のご予約</h3>
+  <p>定員20名・先着順です。お早めにどうぞ！</p>
+  <a href="https://forms.gle/bBvpiXA9TEc5bQug6" target="_blank" class="btn">予約フォームから申し込む</a>
+  <p class="reserve-phone">
+    お電話でも受け付けています
+    <strong>090-5656-3539</strong>
+    <span style="font-size: 0.88rem;">（9:00〜20:00）</span>
+  </p>
+  <p class="reserve-note">
+    ※会場は催事と一切関係がございません<br>
+    ※会場への直接のお問い合わせはご遠慮ください
+  </p>
+</div>
+
+<footer>
+  <div class="brand">コトノハ</div>
+  <div>京都府 木津川市</div>
+  <div style="margin-top: 0.5rem;">kotonoha.kizugawa@gmail.com</div>
+  <div style="margin-top: 0.25rem;">Instagram: @kotonoha_kizugawa</div>
+  <div style="margin-top: 0.5rem;">© 2026 コトノハ</div>
+</footer>
+
+</body>
+</html>
