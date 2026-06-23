@@ -19,8 +19,7 @@
   }
   .event-info-row {
     display: grid;
-    grid-template-columns: 80px 1fr;
-    gap: 0;
+    grid-template-columns: 72px 1fr;
     border-bottom: 1px solid var(--border);
     align-items: stretch;
   }
@@ -28,27 +27,112 @@
   .event-label {
     background: var(--text);
     color: white;
-    font-size: 0.85rem;
+    font-size: 0.82rem;
     font-weight: 700;
     display: flex;
     align-items: center;
     justify-content: center;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.08em;
     padding: 1rem 0;
   }
   .event-value {
-    padding: 0.85rem 1.25rem;
-    font-size: 1rem;
+    padding: 0.85rem 1.1rem;
+    font-size: 0.97rem;
     line-height: 1.6;
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
   .event-value .note {
-    font-size: 0.85rem;
+    font-size: 0.82rem;
     color: var(--text-soft);
     margin-top: 0.1rem;
   }
+  .map-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: #4285f4;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    margin-top: 1rem;
+    transition: opacity 0.2s;
+  }
+  .map-btn:hover { opacity: 0.85; color: white; }
+  .parking-note {
+    margin-top: 0.75rem;
+    font-size: 0.85rem;
+    color: var(--text-soft);
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    line-height: 1.7;
+  }
+  .parking-note strong { color: var(--accent); }
+  .parking-img-wrap {
+    margin-top: 0.75rem;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+  }
+  .parking-img-wrap img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transform: rotate(90deg);
+    transform-origin: center center;
+    max-height: 80vw;
+    object-fit: contain;
+  }
+  .game-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    margin-top: 1.25rem;
+  }
+  .game-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+  .game-card img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    display: block;
+  }
+  .game-card-body {
+    padding: 0.6rem 0.75rem 0.75rem;
+  }
+  .game-card-body h3 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 0.2rem;
+  }
+  .game-card-body p {
+    font-size: 0.82rem;
+    color: var(--text-soft);
+    line-height: 1.5;
+    margin: 0;
+  }
+  .flyer-link {
+    display: inline-block;
+    border: 2px solid var(--accent);
+    color: var(--accent);
+    padding: 0.7rem 1.75rem;
+    border-radius: 9999px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.2s;
+  }
+  .flyer-link:hover { background: var(--accent); color: white; }
   .reserve-phone {
     margin-top: 1.25rem;
     font-size: 0.95rem;
@@ -65,10 +149,6 @@
     font-size: 0.82rem;
     color: var(--text-soft);
     line-height: 1.7;
-  }
-  @media (max-width: 600px) {
-    .event-label { font-size: 0.78rem; }
-    .event-value { font-size: 0.95rem; padding: 0.75rem 1rem; }
   }
 </style>
 </head>
@@ -128,26 +208,53 @@
 </section>
 
 <section class="section" style="padding-top: 0;">
+  <h2>会場・アクセス</h2>
+  <p>加茂文化センター プレイルーム（京都府木津川市加茂町）</p>
+  <a class="map-btn" href="https://maps.google.com/?q=木津川市加茂文化センター" target="_blank">Googleマップで見る</a>
+
+  <h2 style="margin-top: 2rem;">駐車場のご案内</h2>
+  <div class="parking-note">
+    <strong>センター専用駐車場（北・西）</strong>をご利用ください。<br>
+    近隣の病院・月極・JAの駐車場は利用不可です（地図内×印）。
+  </div>
+  <div class="parking-img-wrap">
+    <img src="parking.jpeg" alt="駐車場案内図">
+  </div>
+</section>
+
+<section class="section" style="padding-top: 0;">
   <h2>遊ぶゲーム（予定）</h2>
-  <div class="cards">
-    <div class="card">
-      <h3>ウボンゴ</h3>
-      <p>パズルでスピード勝負。直感と集中力が試されます。</p>
+  <p style="color: var(--text-soft); font-size: 0.95rem;">どれもルールが簡単で、初対面でもすぐ盛り上がれます。</p>
+  <div class="game-grid">
+    <div class="game-card">
+      <img src="game-ubongo.jpg" alt="ウボンゴ">
+      <div class="game-card-body">
+        <h3>ウボンゴ</h3>
+        <p>パズルでスピード勝負。</p>
+      </div>
     </div>
-    <div class="card">
-      <h3>ドブル</h3>
-      <p>同じ絵を見つける反射神経ゲーム。年齢関係なく白熱します。</p>
+    <div class="game-card">
+      <img src="game-dobble.jpg" alt="ドブル">
+      <div class="game-card-body">
+        <h3>ドブル</h3>
+        <p>同じ絵を見つける反射神経ゲーム。</p>
+      </div>
     </div>
-    <div class="card">
-      <h3>ジェンガ</h3>
-      <p>積み木をハラハラ崩さず抜く、定番の盛り上がりゲーム。</p>
+    <div class="game-card">
+      <img src="game-jenga.jpg" alt="ジェンガ">
+      <div class="game-card-body">
+        <h3>ジェンガ</h3>
+        <p>ハラハラ崩さず積み木を抜く。</p>
+      </div>
     </div>
-    <div class="card">
-      <h3>STICK STACK</h3>
-      <p>バランスを取りながら棒を積み上げる、ドキドキのゲーム。</p>
+    <div class="game-card">
+      <img src="game-stickstack.jpg" alt="STICK STACK">
+      <div class="game-card-body">
+        <h3>STICK STACK</h3>
+        <p>バランスを取りながら棒を積む。</p>
+      </div>
     </div>
   </div>
-  <p style="margin-top: 1rem; color: var(--text-soft); font-size: 0.95rem;">どれもルールが簡単で、初対面でもすぐに盛り上がれます。</p>
 </section>
 
 <section class="section" style="padding-top: 0;">
@@ -181,6 +288,10 @@
     ※会場は催事と一切関係がございません<br>
     ※会場への直接のお問い合わせはご遠慮ください
   </p>
+  <div style="margin-top: 1.5rem; border-top: 1px solid var(--border); padding-top: 1.25rem;">
+    <p style="margin-bottom: 0.75rem; color: var(--text-soft); font-size: 0.9rem;">チラシはこちらから印刷できます</p>
+    <a href="event-flyer_1.html" target="_blank" class="flyer-link">チラシを開く（印刷用）</a>
+  </div>
 </div>
 
 <footer>
