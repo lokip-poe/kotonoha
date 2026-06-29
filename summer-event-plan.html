@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>夏休みボードゲーム涼み処 企画書｜コトノハ</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  @page { size: A4; margin: 10mm 14mm; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Noto Sans JP', 'Yu Gothic', sans-serif;
+    font-size: 9pt;
+    color: #1a1a1a;
+    line-height: 1.6;
+    background: white;
+  }
+  .header {
+    border-bottom: 3px solid #d97742;
+    padding-bottom: 7px;
+    margin-bottom: 10px;
+  }
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 3px;
+  }
+  .header h1 {
+    font-size: 15pt;
+    font-weight: 900;
+    color: #2c2218;
+    line-height: 1.25;
+  }
+  .header h1 .accent { color: #d97742; }
+  .header .meta {
+    font-size: 8.5pt;
+    color: #6b5a4a;
+    text-align: right;
+    line-height: 1.7;
+  }
+  .header .subtitle {
+    font-size: 9.5pt;
+    color: #4d3d2f;
+    margin-top: 2px;
+  }
+  h2 {
+    font-size: 9pt;
+    font-weight: 700;
+    color: white;
+    background: #d97742;
+    padding: 2px 10px;
+    border-radius: 3px;
+    margin: 8px 0 4px;
+  }
+  h3 {
+    font-size: 9pt;
+    font-weight: 700;
+    color: #5c3317;
+    border-left: 4px solid #d97742;
+    padding-left: 8px;
+    margin: 8px 0 4px;
+  }
+  p { margin-bottom: 4px; font-size: 9pt; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 4px 0;
+    font-size: 9pt;
+  }
+  th {
+    background: #5c3317;
+    color: white;
+    padding: 3px 8px;
+    text-align: left;
+  }
+  td {
+    border: 1px solid #d0b090;
+    padding: 3px 8px;
+    vertical-align: top;
+  }
+  tr:nth-child(even) td { background: #faf6ef; }
+  .box {
+    background: #faf6ef;
+    border: 1px solid #e8dfd0;
+    border-radius: 5px;
+    padding: 7px 12px;
+    margin: 5px 0;
+    font-size: 9pt;
+  }
+  .box strong { color: #5c3317; }
+  ul { list-style: none; padding: 0; margin: 3px 0 5px; }
+  ul li {
+    padding-left: 12px;
+    position: relative;
+    font-size: 9pt;
+    margin-bottom: 1px;
+  }
+  ul li::before {
+    content: '●';
+    color: #d97742;
+    position: absolute;
+    left: 0;
+    font-size: 6.5pt;
+    top: 3px;
+  }
+  .fee-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 6px;
+    margin: 5px 0;
+  }
+  .fee-card {
+    background: #fffdf8;
+    border: 2px solid #d97742;
+    border-radius: 6px;
+    padding: 6px 10px;
+    text-align: center;
+  }
+  .fee-card .who { font-size: 8.5pt; font-weight: 700; color: #5c3317; margin-bottom: 2px; }
+  .fee-card .price { font-size: 14pt; font-weight: 900; color: #d97742; }
+  .fee-card .price.free { color: #2a7a2a; }
+  .fee-card .note { font-size: 7.5pt; color: #6b5a4a; margin-top: 1px; }
+  .request-box {
+    background: #fff4e8;
+    border: 2px solid #d97742;
+    border-radius: 6px;
+    padding: 8px 12px;
+    margin: 5px 0;
+    font-size: 9pt;
+    line-height: 1.7;
+  }
+  .request-box strong { color: #5c3317; }
+  .footer {
+    margin-top: 10px;
+    border-top: 1px solid #ccc;
+    padding-top: 6px;
+    font-size: 8pt;
+    color: #888;
+    text-align: center;
+  }
+  @media print { body { background: white; } }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-top">
+    <div>
+      <h1>夏休み<span class="accent">ボードゲーム</span>涼み処<br>開催のご提案</h1>
+      <div class="subtitle">クーラーの効いた会所で、子どもたちが安心して過ごせる場所をつくります</div>
+    </div>
+    <div class="meta">
+      2026年7月<br>
+      コトノハ準備会<br>
+      東 正輝<br>
+      090-5656-3539
+    </div>
+  </div>
+</div>
+
+<h2>1. 企画の概要</h2>
+<div class="box">
+  夏休み期間中、<strong>自治会会所をお借りして、子どもたちが涼みながらボードゲームで遊べる場所</strong>を開放します。屋外の猛暑・熱中症対策として、クーラーの効いた安全な居場所を地域に提供します。<br>
+  「家でひとりでテレビゲーム」ではなく、<strong>みんなでテーブルを囲んで笑い合う夏休み</strong>のきっかけをつくります。参加費は無料（保護者は100円）、スタッフが常駐。2026年内に開業予定の多世代交流スペース「コトノハ」の先行イベントとして実施します。
+</div>
+
+<h2>2. 開催概要</h2>
+<table>
+  <tr><th style="width:28%">項目</th><th>内容</th></tr>
+  <tr><td>開催期間</td><td>2026年8月（夏休み期間中）　週1〜2回程度</td></tr>
+  <tr><td>時間</td><td>13:00〜17:00（入退室自由）</td></tr>
+  <tr><td>場所</td><td>〇〇自治会 会所（ご提供いただく場所）</td></tr>
+  <tr><td>定員</td><td>15〜20名程度</td></tr>
+  <tr><td>主催</td><td>コトノハ準備会 / 東 正輝</td></tr>
+</table>
+
+<h2>3. 参加費</h2>
+<div class="fee-box">
+  <div class="fee-card">
+    <div class="who">小学生以下</div>
+    <div class="price free">無　料</div>
+    <div class="note">水・お茶も無料</div>
+  </div>
+  <div class="fee-card">
+    <div class="who">中学生・高校生</div>
+    <div class="price free">無　料</div>
+    <div class="note">水・お茶も無料</div>
+  </div>
+  <div class="fee-card">
+    <div class="who">保護者・大人</div>
+    <div class="price">100円</div>
+    <div class="note">1回あたり・水込み</div>
+  </div>
+</div>
+
+<div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-top:2px;">
+  <div>
+    <h2 style="margin-top:0;">4. 当日の内容</h2>
+    <ul>
+      <li>ボードゲーム（4〜5タイトル）を自由に遊べる時間を提供</li>
+      <li>スタッフがルール説明・進行を担当。慣れていなくても大丈夫</li>
+      <li>参加・退場は自由。途中参加もOK</li>
+      <li>飲み物（水・お茶）をピッチャーで自由提供</li>
+      <li>保護者の送迎・見守りも歓迎</li>
+    </ul>
+  </div>
+  <div>
+    <h2 style="margin-top:0;">5. 安全管理</h2>
+    <ul>
+      <li>スタッフが常時会場に在中</li>
+      <li>小学生以下は保護者同意書または保護者同伴を原則とする</li>
+      <li>参加者の入退室時刻を記録</li>
+      <li>1対1の状況を作らない</li>
+      <li>緊急連絡先の把握・応急処置の準備</li>
+    </ul>
+  </div>
+</div>
+
+<h2>6. 自治会へのお願い</h2>
+<div class="request-box">
+  <strong>お借りしたいもの</strong>：会所のお部屋（テーブル・椅子が置けるスペース）、エアコン使用<br>
+  <strong>費用のご負担</strong>：光熱費の実費（電気代）はコトノハ準備会が負担します<br>
+  <strong>広報のご協力</strong>：回覧板・掲示板でのご周知にご協力いただけると幸いです<br>
+  <strong>ゲーム・備品</strong>：すべてコトノハ準備会が持参します。会所の備品等は一切使用しません
+</div>
+
+<h2>7. コトノハについて</h2>
+<p>ボードゲームを共通言語に、シニア・子ども・現役世代が世代を超えて自然につながる多世代交流居場所です。2026年11〜12月に木津川市加茂エリアへの開業を目指して準備中です。今回のイベントは、地域の皆さんへのご挨拶と、コトノハの雰囲気を体験いただく機会として実施します。</p>
+
+<div class="footer">
+  コトノハ準備会　東 正輝　｜　090-5656-3539　｜　kotonoha.kizugawa@gmail.com　｜　lokip-poe.github.io/kotonoha<br>
+  ご不明な点はお気軽にお声がけください。
+</div>
+
+</body>
+</html>
