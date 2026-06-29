@@ -140,6 +140,23 @@
     text-align: center;
   }
   @media print { body { background: white; } }
+
+  @media screen and (max-width: 640px) {
+    .two-col { grid-template-columns: 1fr !important; }
+    body { font-size: 14px; line-height: 1.7; padding: 16px; }
+    .header h1 { font-size: 20px; }
+    .header .subtitle { font-size: 13px; }
+    .header .meta { font-size: 12px; }
+    h2 { font-size: 13px; padding: 4px 12px; margin: 14px 0 6px; }
+    p, ul li, td, th, .box, .request-box { font-size: 13px; }
+    table { font-size: 13px; }
+    td, th { padding: 6px 8px; }
+    .fee-box { grid-template-columns: 1fr; gap: 8px; }
+    .fee-card .price { font-size: 20px; }
+    .fee-card .who { font-size: 13px; }
+    .fee-card .note { font-size: 11px; }
+    .request-box { font-size: 13px; line-height: 1.8; }
+  }
 </style>
 </head>
 <body>
@@ -194,7 +211,7 @@
   </div>
 </div>
 
-<div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-top:2px;">
+<div class="two-col" style="display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-top:2px;">
   <div>
     <h2 style="margin-top:0;">4. 当日の内容</h2>
     <ul>
