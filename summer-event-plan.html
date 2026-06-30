@@ -6,77 +6,77 @@
 <title>夏休みボードゲーム涼み処 企画書｜コトノハ</title>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
 <style>
-  @page { size: A4; margin: 10mm 14mm; }
+  @page { size: A4; margin: 7mm 12mm; }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
     font-family: 'Noto Sans JP', 'Yu Gothic', sans-serif;
-    font-size: 9pt;
+    font-size: 8.5pt;
     color: #1a1a1a;
-    line-height: 1.6;
+    line-height: 1.5;
     background: white;
   }
   .header {
     border-bottom: 3px solid #d97742;
-    padding-bottom: 7px;
-    margin-bottom: 10px;
+    padding-bottom: 5px;
+    margin-bottom: 7px;
   }
   .header-top {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: 3px;
+    margin-bottom: 2px;
   }
   .header h1 {
-    font-size: 15pt;
+    font-size: 14pt;
     font-weight: 900;
     color: #2c2218;
-    line-height: 1.25;
+    line-height: 1.2;
   }
   .header h1 .accent { color: #d97742; }
   .header .meta {
-    font-size: 8.5pt;
+    font-size: 8pt;
     color: #6b5a4a;
     text-align: right;
-    line-height: 1.7;
+    line-height: 1.6;
   }
   .header .subtitle {
-    font-size: 9.5pt;
+    font-size: 9pt;
     color: #4d3d2f;
-    margin-top: 2px;
+    margin-top: 1px;
   }
   h2 {
-    font-size: 9pt;
+    font-size: 8.5pt;
     font-weight: 700;
     color: white;
     background: #d97742;
-    padding: 2px 10px;
+    padding: 2px 8px;
     border-radius: 3px;
-    margin: 8px 0 4px;
+    margin: 6px 0 3px;
   }
   h3 {
-    font-size: 9pt;
+    font-size: 8.5pt;
     font-weight: 700;
     color: #5c3317;
     border-left: 4px solid #d97742;
     padding-left: 8px;
-    margin: 8px 0 4px;
+    margin: 6px 0 3px;
   }
-  p { margin-bottom: 4px; font-size: 9pt; }
+  p { margin-bottom: 3px; font-size: 8.5pt; }
   table {
     width: 100%;
     border-collapse: collapse;
-    margin: 4px 0;
-    font-size: 9pt;
+    margin: 3px 0;
+    font-size: 8.5pt;
   }
   th {
     background: #5c3317;
     color: white;
-    padding: 3px 8px;
+    padding: 2px 7px;
     text-align: left;
   }
   td {
     border: 1px solid #d0b090;
-    padding: 3px 8px;
+    padding: 2px 7px;
     vertical-align: top;
   }
   tr:nth-child(even) td { background: #faf6ef; }
@@ -84,16 +84,16 @@
     background: #faf6ef;
     border: 1px solid #e8dfd0;
     border-radius: 5px;
-    padding: 7px 12px;
-    margin: 5px 0;
-    font-size: 9pt;
+    padding: 5px 10px;
+    margin: 3px 0;
+    font-size: 8.5pt;
   }
   .box strong { color: #5c3317; }
-  ul { list-style: none; padding: 0; margin: 3px 0 5px; }
+  ul { list-style: none; padding: 0; margin: 2px 0 3px; }
   ul li {
     padding-left: 12px;
     position: relative;
-    font-size: 9pt;
+    font-size: 8.5pt;
     margin-bottom: 1px;
   }
   ul li::before {
@@ -101,41 +101,41 @@
     color: #d97742;
     position: absolute;
     left: 0;
-    font-size: 6.5pt;
+    font-size: 6pt;
     top: 3px;
   }
   .fee-box {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 6px;
-    margin: 5px 0;
+    gap: 5px;
+    margin: 3px 0;
   }
   .fee-card {
     background: #fffdf8;
     border: 2px solid #d97742;
     border-radius: 6px;
-    padding: 6px 10px;
+    padding: 4px 8px;
     text-align: center;
   }
-  .fee-card .who { font-size: 8.5pt; font-weight: 700; color: #5c3317; margin-bottom: 2px; }
-  .fee-card .price { font-size: 14pt; font-weight: 900; color: #d97742; }
+  .fee-card .who { font-size: 8pt; font-weight: 700; color: #5c3317; margin-bottom: 1px; }
+  .fee-card .price { font-size: 13pt; font-weight: 900; color: #d97742; }
   .fee-card .price.free { color: #2a7a2a; }
-  .fee-card .note { font-size: 7.5pt; color: #6b5a4a; margin-top: 1px; }
+  .fee-card .note { font-size: 7pt; color: #6b5a4a; margin-top: 1px; }
   .request-box {
     background: #fff4e8;
     border: 2px solid #d97742;
     border-radius: 6px;
-    padding: 8px 12px;
-    margin: 5px 0;
-    font-size: 9pt;
-    line-height: 1.7;
+    padding: 5px 10px;
+    margin: 3px 0;
+    font-size: 8.5pt;
+    line-height: 1.6;
   }
   .request-box strong { color: #5c3317; }
   .footer {
-    margin-top: 10px;
+    margin-top: 6px;
     border-top: 1px solid #ccc;
-    padding-top: 6px;
-    font-size: 8pt;
+    padding-top: 4px;
+    font-size: 7.5pt;
     color: #888;
     text-align: center;
   }
@@ -178,7 +178,7 @@
 
 <h2>1. 企画の概要</h2>
 <div class="box">
-  夏休み期間中、<strong>自治会会所をお借りして、子どもたちが涼みながらボードゲームで遊べる場所</strong>を開放します。屋外の猛暑・熱中症対策として、クーラーの効いた安全な居場所を地域に提供します。<br>
+  夏休み期間中、<strong>新町自治会 会所をお借りして、子どもたちが涼みながらボードゲームで遊べる場所</strong>を開放します。屋外の猛暑・熱中症対策として、クーラーの効いた安全な居場所を地域に提供します。<br>
   「家でひとりでテレビゲーム」ではなく、<strong>みんなでテーブルを囲んで笑い合う夏休み</strong>のきっかけをつくります。参加費は無料（保護者は100円）、スタッフが常駐。2026年内に開業予定の多世代交流スペース「コトノハ」の先行イベントとして実施します。
 </div>
 
@@ -187,7 +187,7 @@
   <tr><th style="width:28%">項目</th><th>内容</th></tr>
   <tr><td>開催期間</td><td>2026年8月（夏休み期間中）　週1〜2回程度</td></tr>
   <tr><td>時間</td><td>13:00〜17:00（入退室自由）</td></tr>
-  <tr><td>場所</td><td>〇〇自治会 会所（ご提供いただく場所）</td></tr>
+  <tr><td>場所</td><td>新町自治会 会所</td></tr>
   <tr><td>定員</td><td>15〜20名程度</td></tr>
   <tr><td>主催</td><td>コトノハ準備会 / 東 正輝</td></tr>
 </table>
@@ -245,7 +245,26 @@
 <h2>7. コトノハについて</h2>
 <p>ボードゲームを共通言語に、シニア・子ども・現役世代が世代を超えて自然につながる多世代交流居場所です。2026年11〜12月に木津川市加茂エリアへの開業を目指して準備中です。今回のイベントは、地域の皆さんへのご挨拶と、コトノハの雰囲気を体験いただく機会として実施します。</p>
 
-<div class="footer">
+<div style="display:flex; gap:10px; align-items:flex-start; background:#fff4e8; border:2px solid #d97742; border-radius:6px; padding:7px 12px; margin-top:7px;">
+  <div style="text-align:center; flex-shrink:0;">
+    <img src="data:image/png;base64,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" style="width:62px;height:62px;">
+    <div style="font-size:7.5pt;color:#5c3317;margin-top:2px;">ウェブサイト</div>
+  </div>
+  <div style="text-align:center; flex-shrink:0;">
+    <img src="data:image/png;base64,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" style="width:62px;height:62px;">
+    <div style="font-size:7.5pt;color:#5c3317;margin-top:2px;">Instagram</div>
+  </div>
+  <div style="text-align:center; flex-shrink:0;">
+    <img src="data:image/png;base64,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" style="width:62px;height:62px;">
+    <div style="font-size:7.5pt;color:#5c3317;margin-top:2px;">日程アンケート</div>
+  </div>
+  <div style="margin-left:4px;">
+    <div style="font-size:8.5pt;font-weight:700;color:#5c3317;margin-bottom:3px;">QRコードのご案内</div>
+    <div style="font-size:8pt;color:#4d3d2f;line-height:1.6;">コトノハのウェブサイト・Instagram・開催日程アンケートは左のQRコードからご覧いただけます。アンケートは1分程度で回答いただけます。</div>
+  </div>
+</div>
+
+<div class="footer"><div class="footer"><div class="footer">
   コトノハ準備会　東 正輝　｜　090-5656-3539　｜　kotonoha.kizugawa@gmail.com　｜　lokip-poe.github.io/kotonoha<br>
   ご不明な点はお気軽にお声がけください。
 </div>
