@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>コトノハ｜リンク集・資料</title>
+<meta name="description" content="コトノハのご予約・サイト・資料まとめページ">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .hub-section {
+    padding: 2.5rem 1.5rem;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+  .hub-title {
+    text-align: center;
+    margin-bottom: 0.3rem;
+  }
+  .hub-sub {
+    text-align: center;
+    color: var(--text-soft);
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+  }
+  .hub-group {
+    margin-bottom: 2.2rem;
+  }
+  .hub-group h2 {
+    font-size: 1rem;
+    color: var(--accent);
+    border-left: 4px solid var(--accent);
+    padding-left: 0.7rem;
+    margin-bottom: 0.9rem;
+  }
+  .hub-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+  .hub-link {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 0.9rem 1.1rem;
+    box-shadow: var(--shadow);
+    color: var(--text);
+    font-weight: 500;
+  }
+  .hub-link:hover { border-color: var(--accent); color: var(--text); }
+  .hub-link .icon { font-size: 1.3rem; flex-shrink: 0; }
+  .hub-link .arrow { margin-left: auto; color: var(--accent); }
+  .doc-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+  .doc-link {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    color: var(--text);
+    font-size: 0.92rem;
+  }
+  .doc-link:hover { border-color: var(--accent); color: var(--text); }
+  .doc-link .arrow { margin-left: auto; color: var(--accent); font-size: 0.85rem; }
+  .changelog-note {
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+  .changelog-note a { font-size: 0.9rem; }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-brand"><span class="dot"></span>コトノハ</div>
+    <div class="nav-links">
+      <a href="index.html">ホーム</a>
+      <a href="event.html">イベント</a>
+      <a href="delivery.html">出張サービス</a>
+      <a href="details.html">くわしく</a>
+    </div>
+  </div>
+</nav>
+
+<section class="hub-section">
+  <h1 class="hub-title">コトノハ リンク集</h1>
+  <p class="hub-sub">よく使うリンクと資料をまとめました</p>
+
+  <div class="hub-group">
+    <h2>よく使うリンク</h2>
+    <div class="hub-links">
+      <a class="hub-link" href="https://forms.gle/bBvpiXA9TEc5bQug6" target="_blank" rel="noopener">
+        <span class="icon">📝</span>予約フォーム<span class="arrow">→</span>
+      </a>
+      <a class="hub-link" href="index.html">
+        <span class="icon">🏠</span>コトノハ サイト<span class="arrow">→</span>
+      </a>
+      <a class="hub-link" href="https://www.instagram.com/kotonoha_kizugawa" target="_blank" rel="noopener">
+        <span class="icon">📷</span>Instagram<span class="arrow">→</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="hub-group">
+    <h2>資料一覧</h2>
+    <div class="doc-links">
+      <a class="doc-link" href="doc-flyer.pdf" target="_blank" rel="noopener">コトノハ紹介フライヤー<span class="arrow">PDF</span></a>
+      <a class="doc-link" href="doc-event.pdf" target="_blank" rel="noopener">イベントチラシ<span class="arrow">PDF</span></a>
+      <a class="doc-link" href="doc-games.pdf" target="_blank" rel="noopener">当日のゲーム紹介<span class="arrow">PDF</span></a>
+      <a class="doc-link" href="doc-summer-notice.pdf" target="_blank" rel="noopener">夏休み涼み処 告知チラシ<span class="arrow">PDF</span></a>
+      <a class="doc-link" href="doc-summer-plan.pdf" target="_blank" rel="noopener">夏休み涼み処 企画書<span class="arrow">PDF</span></a>
+      <a class="doc-link" href="doc-delivery.pdf" target="_blank" rel="noopener">出張ボードゲーム交流会<span class="arrow">PDF</span></a>
+      <a class="doc-link" href="doc-progress.pdf" target="_blank" rel="noopener">進捗サマリー<span class="arrow">PDF</span></a>
+    </div>
+    <p class="changelog-note"><a href="changelog.html">→ 資料の変更履歴を見る</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="brand">コトノハ</div>
+  <div>京都府 木津川市</div>
+  <div style="margin-top: 0.5rem;">© 2026 コトノハ</div>
+</footer>
+
+</body>
+</html>
