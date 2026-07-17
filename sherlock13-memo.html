@@ -16,6 +16,9 @@
     --shadow: 0 2px 12px rgba(61, 47, 36, 0.08);
     --out-bg: #e8e2d8;
     --out-text: #a8987e;
+    --assign-bg: #eaf1f8;
+    --assign-border: #7ea3c4;
+    --assign-text: #2d5578;
     --mark-bg: #1a365d;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
@@ -27,18 +30,76 @@
     max-width: 480px;
     margin: 0 auto;
   }
-  header { text-align: center; margin: 0.5rem 0 1.2rem; }
+  header { text-align: center; margin: 0.5rem 0 1rem; }
   h1 { font-size: 1.25rem; font-weight: 700; }
   .sub { color: var(--text-soft); font-size: 0.82rem; margin-top: 0.2rem; }
 
+  .howto {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 0.8rem 1rem;
+    font-size: 0.8rem;
+    color: var(--text-soft);
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+  .howto strong { color: var(--text); }
+
+  .settings {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 0.9rem 1rem;
+    margin-bottom: 1rem;
+  }
+  .settings h2 {
+    font-size: 0.85rem;
+    color: var(--text-soft);
+    margin-bottom: 0.6rem;
+  }
+  .count-row {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 0.7rem;
+  }
+  .count-row label { font-size: 0.85rem; color: var(--text-soft); }
+  .count-row select {
+    flex: 1;
+    padding: 0.4rem;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 0.9rem;
+    background: white;
+    color: var(--text);
+  }
+  .names {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+  .name-field { display: flex; flex-direction: column; gap: 2px; }
+  .name-field .role { font-size: 0.68rem; color: var(--text-soft); }
+  .name-field input {
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 0.4rem 0.5rem;
+    font-size: 0.88rem;
+    color: var(--text);
+    background: white;
+  }
+  .name-field.me input { border-color: var(--accent); }
+
   .legend {
-    display: flex; justify-content: center; gap: 0.9rem;
-    font-size: 0.75rem; color: var(--text-soft); margin-bottom: 1rem; flex-wrap: wrap;
+    display: flex; justify-content: center; gap: 0.7rem;
+    font-size: 0.72rem; color: var(--text-soft); margin-bottom: 1rem; flex-wrap: wrap;
   }
   .legend span { display: inline-flex; align-items: center; gap: 4px; }
   .dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
   .dot.candidate { background: var(--card); border: 2px solid var(--border); }
   .dot.out { background: var(--out-bg); border: 2px solid var(--out-bg); }
+  .dot.assigned { background: var(--assign-bg); border: 2px solid var(--assign-border); }
   .dot.mark { background: var(--mark-bg); }
 
   .grid {
@@ -52,30 +113,33 @@
     border: 2px solid var(--border);
     border-radius: 12px;
     box-shadow: var(--shadow);
-    padding: 0.6rem 0.5rem 0.5rem;
+    padding: 0.55rem 0.45rem 0.5rem;
     text-align: center;
-    user-select: none;
-    cursor: pointer;
     transition: background 0.15s, border-color 0.15s, opacity 0.15s;
   }
   .tile .num {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: 900;
     color: var(--text);
   }
-  .tile .state {
-    font-size: 0.7rem;
-    color: var(--text-soft);
-    margin-top: 2px;
-    min-height: 1em;
-  }
-  .tile input {
+  .tile select {
     width: 100%;
     margin-top: 0.35rem;
     border: 1px solid var(--border);
     border-radius: 6px;
+    background: rgba(255,255,255,0.8);
+    font-size: 0.68rem;
+    text-align: center;
+    padding: 3px 1px;
+    color: var(--text);
+  }
+  .tile input {
+    width: 100%;
+    margin-top: 0.3rem;
+    border: 1px solid var(--border);
+    border-radius: 6px;
     background: rgba(255,255,255,0.7);
-    font-size: 0.72rem;
+    font-size: 0.7rem;
     text-align: center;
     padding: 3px 2px;
     color: var(--text);
@@ -83,16 +147,23 @@
   .tile.out {
     background: var(--out-bg);
     border-color: var(--out-bg);
-    opacity: 0.6;
+    opacity: 0.65;
   }
   .tile.out .num { text-decoration: line-through; color: var(--out-text); }
+  .tile.assigned {
+    background: var(--assign-bg);
+    border-color: var(--assign-border);
+  }
+  .tile.assigned .num { color: var(--assign-text); }
   .tile.mark {
     background: var(--mark-bg);
     border-color: var(--mark-bg);
   }
   .tile.mark .num { color: white; }
-  .tile.mark .state { color: #cdd8e6; }
-  .tile.mark input { background: rgba(255,255,255,0.15); color: white; }
+  .tile.mark select, .tile.mark input {
+    background: rgba(255,255,255,0.15);
+    color: white;
+  }
   .tile.mark input::placeholder { color: rgba(255,255,255,0.5); }
 
   .actions {
@@ -107,36 +178,34 @@
     padding: 0.6rem;
     font-size: 0.85rem;
   }
-  .howto {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 0.8rem 1rem;
-    font-size: 0.8rem;
-    color: var(--text-soft);
-    line-height: 1.7;
-    margin-bottom: 1rem;
-  }
-  .howto strong { color: var(--text); }
-  .back { text-align: center; font-size: 0.85rem; }
+  .back { text-align: center; font-size: 0.85rem; margin-top: 0.5rem; }
 </style>
 </head>
 <body>
 
 <header>
   <h1>🔍 シャーロック13 メモ</h1>
-  <div class="sub">カードをタップして候補を絞り込もう</div>
+  <div class="sub">カードごとに状態を選んで絞り込もう</div>
 </header>
 
 <div class="howto">
-  タイルを<strong>タップ</strong>すると「候補 → 除外 → 犯人っぽい」の順で切り替わるよ。<br>
-  下の小さい欄に、聞いたアイコン情報（例：パイプ○）をメモできるよ。
+  各カードのプルダウンで、<strong>無罪</strong>（違うとわかった）／<strong>誰の手札か</strong>／<strong>犯人候補</strong>を選べるよ。下の小さい欄にはアイコン情報などをメモできる。
+</div>
+
+<div class="settings">
+  <h2>プレイヤー設定</h2>
+  <div class="count-row">
+    <label for="playerCount">人数</label>
+    <select id="playerCount"></select>
+  </div>
+  <div class="names" id="names"></div>
 </div>
 
 <div class="legend">
-  <span><span class="dot candidate"></span>候補</span>
-  <span><span class="dot out"></span>除外</span>
-  <span><span class="dot mark"></span>犯人っぽい</span>
+  <span><span class="dot candidate"></span>未選択</span>
+  <span><span class="dot out"></span>無罪</span>
+  <span><span class="dot assigned"></span>誰かの手札</span>
+  <span><span class="dot mark"></span>犯人候補</span>
 </div>
 
 <div class="grid" id="grid"></div>
@@ -148,78 +217,156 @@
 <p class="back"><a href="info.html" style="color:var(--accent);">← リンク集にもどる</a></p>
 
 <script>
-  const N = 13;
-  const grid = document.getElementById('grid');
-  const STORAGE_KEY = 'sherlock13-memo-state';
+  const N_SUSPECTS = 13;
+  const DEFAULT_NAMES = ['自分', 'A', 'B', 'C', 'D'];
+  const STORAGE_KEY = 'sherlock13-memo-state-v2';
 
   function load() {
     try {
-      return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {};
-    } catch (e) { return {}; }
+      const s = JSON.parse(localStorage.getItem(STORAGE_KEY));
+      if (s && s.playerCount && s.names && s.tiles) return s;
+    } catch (e) {}
+    return {
+      playerCount: 4,
+      names: DEFAULT_NAMES.slice(),
+      tiles: {}
+    };
   }
-  function save(state) {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
-  }
+  function save() { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); }
 
   let state = load();
+  for (let i = 1; i <= N_SUSPECTS; i++) {
+    if (!state.tiles['t' + i]) state.tiles['t' + i] = { assign: '', note: '' };
+  }
 
-  function tileClass(s) {
-    if (s === 1) return 'out';
-    if (s === 2) return 'mark';
+  const playerCountSel = document.getElementById('playerCount');
+  const namesWrap = document.getElementById('names');
+  const grid = document.getElementById('grid');
+
+  function renderPlayerCountOptions() {
+    playerCountSel.innerHTML = '';
+    for (let n = 2; n <= 5; n++) {
+      const opt = document.createElement('option');
+      opt.value = n;
+      opt.textContent = n + '人';
+      if (n === state.playerCount) opt.selected = true;
+      playerCountSel.appendChild(opt);
+    }
+  }
+
+  function renderNameFields() {
+    namesWrap.innerHTML = '';
+    for (let i = 0; i < state.playerCount; i++) {
+      const field = document.createElement('div');
+      field.className = 'name-field' + (i === 0 ? ' me' : '');
+
+      const role = document.createElement('div');
+      role.className = 'role';
+      role.textContent = i === 0 ? '自分' : 'プレイヤー' + i;
+      field.appendChild(role);
+
+      const input = document.createElement('input');
+      input.type = 'text';
+      input.value = state.names[i] || DEFAULT_NAMES[i] || ('P' + i);
+      input.addEventListener('input', (e) => {
+        state.names[i] = e.target.value;
+        save();
+        renderGrid();
+      });
+      field.appendChild(input);
+
+      namesWrap.appendChild(field);
+    }
+  }
+
+  function assignOptions() {
+    const opts = [{ value: '', label: '（未選択）' }];
+    opts.push({ value: 'innocent', label: '無罪' });
+    for (let i = 1; i < state.playerCount; i++) {
+      const name = state.names[i] || DEFAULT_NAMES[i] || ('P' + i);
+      opts.push({ value: 'player-' + i, label: name });
+    }
+    opts.push({ value: 'suspect', label: '犯人候補' });
+    return opts;
+  }
+
+  function tileClass(assign) {
+    if (assign === 'innocent') return 'out';
+    if (assign === 'suspect') return 'mark';
+    if (assign && assign.startsWith('player-')) return 'assigned';
     return '';
   }
-  function stateLabel(s) {
-    if (s === 1) return '除外';
-    if (s === 2) return '犯人っぽい';
-    return '';
+
+  function renderGrid() {
+    grid.innerHTML = '';
+    const opts = assignOptions();
+
+    for (let i = 1; i <= N_SUSPECTS; i++) {
+      const key = 't' + i;
+      const t = state.tiles[key];
+
+      if (t.assign && t.assign.startsWith('player-')) {
+        const idx = parseInt(t.assign.split('-')[1], 10);
+        if (idx >= state.playerCount) t.assign = '';
+      }
+
+      const tile = document.createElement('div');
+      tile.className = 'tile ' + tileClass(t.assign);
+
+      const num = document.createElement('div');
+      num.className = 'num';
+      num.textContent = i;
+      tile.appendChild(num);
+
+      const select = document.createElement('select');
+      opts.forEach(o => {
+        const opt = document.createElement('option');
+        opt.value = o.value;
+        opt.textContent = o.label;
+        if (o.value === t.assign) opt.selected = true;
+        select.appendChild(opt);
+      });
+      select.addEventListener('change', (e) => {
+        t.assign = e.target.value;
+        save();
+        tile.className = 'tile ' + tileClass(t.assign);
+      });
+      tile.appendChild(select);
+
+      const noteInput = document.createElement('input');
+      noteInput.type = 'text';
+      noteInput.placeholder = 'メモ';
+      noteInput.value = t.note;
+      noteInput.addEventListener('input', (e) => {
+        t.note = e.target.value;
+        save();
+      });
+      tile.appendChild(noteInput);
+
+      grid.appendChild(tile);
+    }
   }
 
-  for (let i = 1; i <= N; i++) {
-    const key = 'tile' + i;
-    if (!state[key]) state[key] = { status: 0, note: '' };
-
-    const tile = document.createElement('div');
-    tile.className = 'tile ' + tileClass(state[key].status);
-    tile.dataset.key = key;
-
-    const num = document.createElement('div');
-    num.className = 'num';
-    num.textContent = i;
-
-    const st = document.createElement('div');
-    st.className = 'state';
-    st.textContent = stateLabel(state[key].status);
-
-    const input = document.createElement('input');
-    input.type = 'text';
-    input.placeholder = 'メモ';
-    input.value = state[key].note;
-    input.addEventListener('click', (e) => e.stopPropagation());
-    input.addEventListener('input', (e) => {
-      state[key].note = e.target.value;
-      save(state);
-    });
-
-    tile.appendChild(num);
-    tile.appendChild(st);
-    tile.appendChild(input);
-
-    tile.addEventListener('click', () => {
-      state[key].status = (state[key].status + 1) % 3;
-      tile.className = 'tile ' + tileClass(state[key].status);
-      st.textContent = stateLabel(state[key].status);
-      save(state);
-    });
-
-    grid.appendChild(tile);
-  }
+  playerCountSel.addEventListener('change', (e) => {
+    state.playerCount = parseInt(e.target.value, 10);
+    save();
+    renderNameFields();
+    renderGrid();
+  });
 
   document.getElementById('resetBtn').addEventListener('click', () => {
     if (!confirm('全部リセットする？')) return;
-    state = {};
-    save(state);
-    location.reload();
+    state = { playerCount: 4, names: DEFAULT_NAMES.slice(), tiles: {} };
+    for (let i = 1; i <= N_SUSPECTS; i++) state.tiles['t' + i] = { assign: '', note: '' };
+    save();
+    renderPlayerCountOptions();
+    renderNameFields();
+    renderGrid();
   });
+
+  renderPlayerCountOptions();
+  renderNameFields();
+  renderGrid();
 </script>
 
 </body>
