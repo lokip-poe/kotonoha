@@ -10,7 +10,7 @@
     "difficulty": 1,
     "genre": [
       "記憶力",
-      "とっさの一言"
+      "スピード・反射神経"
     ],
     "image": "game-nanjamonja.jpg",
     "popup_pdf": "popups/nanja-monja.pdf"
@@ -25,8 +25,7 @@
     "time_min": 5,
     "difficulty": 1,
     "genre": [
-      "バランス",
-      "積み上げ"
+      "バランス・集中"
     ],
     "image": "game-rhino-front.jpg",
     "popup_pdf": "popups/rhino-hero.pdf"
@@ -42,7 +41,7 @@
     "difficulty": 2,
     "genre": [
       "アクション",
-      "タイミング"
+      "バランス・集中"
     ],
     "image": "game-woodman.jpg",
     "popup_pdf": "popups/woodman.pdf"
@@ -57,8 +56,7 @@
     "time_min": 15,
     "difficulty": 1,
     "genre": [
-      "反射神経",
-      "スピード"
+      "スピード・反射神経"
     ],
     "image": "game-dobble.jpg",
     "popup_pdf": "popups/dobble.pdf"
@@ -73,8 +71,7 @@
     "time_min": 15,
     "difficulty": 2,
     "genre": [
-      "バランス",
-      "ハラハラ"
+      "バランス・集中"
     ],
     "image": "game-jenga.jpg",
     "popup_pdf": "popups/jenga.pdf"
@@ -89,8 +86,8 @@
     "time_min": 15,
     "difficulty": 2,
     "genre": [
-      "バランス",
-      "スピード"
+      "バランス・集中",
+      "スピード・反射神経"
     ],
     "image": "game-sticky.jpg",
     "popup_pdf": "popups/sticky.pdf"
@@ -105,8 +102,7 @@
     "time_min": 15,
     "difficulty": 2,
     "genre": [
-      "バランス",
-      "積み上げ"
+      "バランス・集中"
     ],
     "image": "game-balanceblocks.jpg",
     "popup_pdf": "popups/balance-blocks.pdf"
@@ -121,8 +117,7 @@
     "time_min": 10,
     "difficulty": 2,
     "genre": [
-      "頭を使う",
-      "五目並べ"
+      "パズル・頭脳"
     ],
     "image": "game-okplay.jpg",
     "popup_pdf": "popups/ok-play.pdf"
@@ -137,7 +132,7 @@
     "time_min": 30,
     "difficulty": 2,
     "genre": [
-      "ことばの力"
+      "ことば・コミュニケーション"
     ],
     "image": "game-hiragajan-hai.jpg",
     "popup_pdf": "popups/hiragajan.pdf"
@@ -152,8 +147,8 @@
     "time_min": 15,
     "difficulty": 1,
     "genre": [
-      "パズル",
-      "スピード"
+      "パズル・頭脳",
+      "スピード・反射神経"
     ],
     "image": "game-ubongomini.jpg",
     "popup_pdf": "popups/ubongo-mini.pdf"
@@ -168,8 +163,7 @@
     "time_min": 15,
     "difficulty": 2,
     "genre": [
-      "パズル",
-      "集中力"
+      "パズル・頭脳"
     ],
     "image": "game-ubongopokemon.jpg",
     "popup_pdf": "popups/ubongo-pokemon.pdf"
@@ -184,8 +178,7 @@
     "time_min": 25,
     "difficulty": 2,
     "genre": [
-      "パズル",
-      "集中力"
+      "パズル・頭脳"
     ],
     "image": "game-ubongo.jpg",
     "popup_pdf": "popups/ubongo.pdf"
@@ -200,8 +193,7 @@
     "time_min": 20,
     "difficulty": 2,
     "genre": [
-      "反射神経",
-      "とっさの判断"
+      "スピード・反射神経"
     ],
     "image": "game-obakecatch.jpg",
     "popup_pdf": "popups/obake-catch.pdf"
@@ -216,8 +208,8 @@
     "time_min": 30,
     "difficulty": 2,
     "genre": [
-      "協力",
-      "ことば"
+      "ことば・コミュニケーション",
+      "協力プレイ"
     ],
     "image": "game-ito-front.jpg",
     "popup_pdf": "popups/ito.pdf"
@@ -232,8 +224,7 @@
     "time_min": 10,
     "difficulty": 2,
     "genre": [
-      "集中力",
-      "そっと置く"
+      "バランス・集中"
     ],
     "image": "game-magnetchess.jpg",
     "popup_pdf": "popups/magnet-chess.pdf"
@@ -248,8 +239,7 @@
     "time_min": 15,
     "difficulty": 3,
     "genre": [
-      "バランス",
-      "色あわせ"
+      "バランス・集中"
     ],
     "image": "game-stickstack.jpg",
     "popup_pdf": "popups/stick-stack.pdf"
