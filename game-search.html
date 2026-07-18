@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ゲームさがす｜コトノハ</title>
+<meta name="description" content="コトノハで遊べるボードゲームを対象年齢・人数・時間・ジャンルで検索">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .search-section {
+    padding: 2rem 1.2rem 3rem;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .search-title { text-align: center; margin-bottom: 0.3rem; }
+  .search-sub {
+    text-align: center;
+    color: var(--text-soft);
+    font-size: 0.9rem;
+    margin-bottom: 1.6rem;
+  }
+
+  .filters {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+    padding: 1.1rem 1.2rem 1.3rem;
+    margin-bottom: 1.5rem;
+  }
+  .filter-row { margin-bottom: 1rem; }
+  .filter-row:last-child { margin-bottom: 0; }
+  .filter-row label.f-title {
+    display: block;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--text-soft);
+    margin-bottom: 0.5rem;
+  }
+  .filter-row select, .filter-row input[type="number"] {
+    width: 100%;
+    padding: 0.6rem 0.7rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 0.92rem;
+    background: white;
+    color: var(--text);
+    font-family: inherit;
+  }
+  .genre-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .genre-chip {
+    border: 1px solid var(--border);
+    background: white;
+    color: var(--text-soft);
+    border-radius: 9999px;
+    padding: 0.35rem 0.9rem;
+    font-size: 0.8rem;
+    cursor: pointer;
+    user-select: none;
+  }
+  .genre-chip.active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: white;
+  }
+  .filter-two {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+  }
+  .reset-link {
+    text-align: right;
+    margin-top: 0.9rem;
+  }
+  .reset-link button {
+    background: none;
+    border: none;
+    color: var(--accent);
+    font-size: 0.82rem;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  .result-count {
+    font-size: 0.85rem;
+    color: var(--text-soft);
+    margin-bottom: 0.8rem;
+    padding-left: 0.2rem;
+  }
+
+  .game-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  .game-card {
+    display: flex;
+    gap: 0.9rem;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    padding: 0.8rem 1rem;
+    align-items: center;
+  }
+  .game-card img {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    background: #f0ece4;
+    border-radius: 8px;
+    flex-shrink: 0;
+  }
+  .game-card-body { flex: 1; min-width: 0; }
+  .game-card-name {
+    font-weight: 700;
+    color: var(--text);
+    font-size: 1rem;
+    line-height: 1.3;
+  }
+  .game-card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    margin: 0.3rem 0;
+  }
+  .game-card-tags span {
+    font-size: 0.68rem;
+    background: #faf0dc;
+    color: var(--wood);
+    padding: 1px 8px;
+    border-radius: 9999px;
+  }
+  .game-card-meta {
+    font-size: 0.75rem;
+    color: var(--text-soft);
+    display: flex;
+    gap: 0.7rem;
+    flex-wrap: wrap;
+  }
+  .game-card-link {
+    flex-shrink: 0;
+    font-size: 0.78rem;
+    background: var(--accent);
+    color: white;
+    padding: 0.5rem 0.8rem;
+    border-radius: 8px;
+    text-align: center;
+    white-space: nowrap;
+  }
+  .game-card-link:hover { background: var(--accent-hover); color: white; }
+
+  .empty-state {
+    text-align: center;
+    color: var(--text-soft);
+    font-size: 0.9rem;
+    padding: 2rem 1rem;
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-brand"><span class="dot"></span>コトノハ</div>
+    <div class="nav-links">
+      <a href="index.html">ホーム</a>
+      <a href="info.html">リンク集</a>
+    </div>
+  </div>
+</nav>
+
+<section class="search-section">
+  <h1 class="search-title">🎲 ゲームさがす</h1>
+  <p class="search-sub">対象年齢・人数・時間・ジャンルで絞り込めます</p>
+
+  <div class="filters">
+    <div class="filter-row">
+      <label class="f-title">ジャンル</label>
+      <div class="genre-chips" id="genreChips"></div>
+    </div>
+    <div class="filter-two">
+      <div class="filter-row">
+        <label class="f-title" for="ageSelect">対象年齢</label>
+        <select id="ageSelect">
+          <option value="">こだわらない</option>
+        </select>
+      </div>
+      <div class="filter-row">
+        <label class="f-title" for="playersInput">遊ぶ人数</label>
+        <input type="number" id="playersInput" min="1" placeholder="例：4">
+      </div>
+    </div>
+    <div class="filter-two">
+      <div class="filter-row">
+        <label class="f-title" for="timeSelect">プレイ時間</label>
+        <select id="timeSelect">
+          <option value="">こだわらない</option>
+          <option value="10">10分以内</option>
+          <option value="15">15分以内</option>
+          <option value="20">20分以内</option>
+          <option value="30">30分以内</option>
+        </select>
+      </div>
+      <div class="filter-row">
+        <label class="f-title" for="sortSelect">並び替え</label>
+        <select id="sortSelect">
+          <option value="default">おすすめ順</option>
+          <option value="age">対象年齢が低い順</option>
+          <option value="time">時間が短い順</option>
+          <option value="name">名前順</option>
+        </select>
+      </div>
+    </div>
+    <div class="reset-link"><button id="resetBtn" type="button">条件をリセット</button></div>
+  </div>
+
+  <p class="result-count" id="resultCount"></p>
+  <div class="game-list" id="gameList"></div>
+</section>
+
+<footer>
+  <div class="brand">コトノハ</div>
+  <div>京都府 木津川市</div>
+  <div style="margin-top: 0.5rem;">© 2026 コトノハ</div>
+</footer>
+
+<script>
+  let games = [];
+  let activeGenres = new Set();
+
+  const genreChips = document.getElementById('genreChips');
+  const ageSelect = document.getElementById('ageSelect');
+  const playersInput = document.getElementById('playersInput');
+  const timeSelect = document.getElementById('timeSelect');
+  const sortSelect = document.getElementById('sortSelect');
+  const resultCount = document.getElementById('resultCount');
+  const gameList = document.getElementById('gameList');
+
+  function setupFilters() {
+    const genres = [...new Set(games.flatMap(g => g.genre))].sort();
+    genres.forEach(g => {
+      const chip = document.createElement('div');
+      chip.className = 'genre-chip';
+      chip.textContent = g;
+      chip.addEventListener('click', () => {
+        if (activeGenres.has(g)) { activeGenres.delete(g); chip.classList.remove('active'); }
+        else { activeGenres.add(g); chip.classList.add('active'); }
+        render();
+      });
+      genreChips.appendChild(chip);
+    });
+
+    const ages = [...new Set(games.map(g => g.age_min).filter(a => a != null))].sort((a, b) => a - b);
+    ages.forEach(a => {
+      const opt = document.createElement('option');
+      opt.value = a;
+      opt.textContent = a + '歳〜でもOK';
+      ageSelect.appendChild(opt);
+    });
+  }
+
+  function matches(g) {
+    if (activeGenres.size > 0) {
+      const hasGenre = g.genre.some(x => activeGenres.has(x));
+      if (!hasGenre) return false;
+    }
+    if (ageSelect.value) {
+      const maxAge = parseInt(ageSelect.value, 10);
+      if (g.age_min != null && g.age_min > maxAge) return false;
+    }
+    if (playersInput.value) {
+      const n = parseInt(playersInput.value, 10);
+      if (g.players_min != null && n < g.players_min) return false;
+      if (g.players_max != null && n > g.players_max) return false;
+    }
+    if (timeSelect.value) {
+      const maxTime = parseInt(timeSelect.value, 10);
+      if (g.time_min != null && g.time_min > maxTime) return false;
+    }
+    return true;
+  }
+
+  function sortGames(list) {
+    const mode = sortSelect.value;
+    const arr = list.slice();
+    if (mode === 'age') arr.sort((a, b) => (a.age_min ?? 99) - (b.age_min ?? 99));
+    else if (mode === 'time') arr.sort((a, b) => (a.time_min ?? 999) - (b.time_min ?? 999));
+    else if (mode === 'name') arr.sort((a, b) => a.name.localeCompare(b.name, 'ja'));
+    return arr;
+  }
+
+  function playersLabel(g) {
+    if (g.players_min != null && g.players_max != null) return g.players_min + '〜' + g.players_max + '人';
+    if (g.players_min != null) return g.players_min + '人〜';
+    return '';
+  }
+
+  function render() {
+    const filtered = sortGames(games.filter(matches));
+    resultCount.textContent = filtered.length + ' 件見つかりました';
+    gameList.innerHTML = '';
+
+    if (filtered.length === 0) {
+      gameList.innerHTML = '<div class="empty-state">条件に合うゲームが見つかりませんでした。<br>条件を減らしてみてください。</div>';
+      return;
+    }
+
+    filtered.forEach(g => {
+      const card = document.createElement('div');
+      card.className = 'game-card';
+
+      const img = document.createElement('img');
+      img.src = g.image;
+      img.alt = g.name;
+      card.appendChild(img);
+
+      const body = document.createElement('div');
+      body.className = 'game-card-body';
+
+      const name = document.createElement('div');
+      name.className = 'game-card-name';
+      name.textContent = g.name;
+      body.appendChild(name);
+
+      const tags = document.createElement('div');
+      tags.className = 'game-card-tags';
+      g.genre.forEach(t => {
+        const span = document.createElement('span');
+        span.textContent = t;
+        tags.appendChild(span);
+      });
+      body.appendChild(tags);
+
+      const meta = document.createElement('div');
+      meta.className = 'game-card-meta';
+      meta.innerHTML =
+        '<span>👥 ' + playersLabel(g) + '</span>' +
+        '<span>🎂 ' + (g.age_min != null ? g.age_min + '歳〜' : '') + '</span>' +
+        '<span>⏱️ 約' + (g.time_min ?? '?') + '分〜</span>';
+      body.appendChild(meta);
+
+      card.appendChild(body);
+
+      const link = document.createElement('a');
+      link.className = 'game-card-link';
+      link.href = g.popup_pdf;
+      link.target = '_blank';
+      link.rel = 'noopener';
+      link.textContent = 'あそびかた';
+      card.appendChild(link);
+
+      gameList.appendChild(card);
+    });
+  }
+
+  document.getElementById('resetBtn').addEventListener('click', () => {
+    activeGenres.clear();
+    document.querySelectorAll('.genre-chip').forEach(c => c.classList.remove('active'));
+    ageSelect.value = '';
+    playersInput.value = '';
+    timeSelect.value = '';
+    sortSelect.value = 'default';
+    render();
+  });
+
+  [ageSelect, playersInput, timeSelect, sortSelect].forEach(el => {
+    el.addEventListener('input', render);
+    el.addEventListener('change', render);
+  });
+
+  fetch('games.json')
+    .then(res => res.json())
+    .then(data => {
+      games = data;
+      setupFilters();
+      render();
+    })
+    .catch(() => {
+      gameList.innerHTML = '<div class="empty-state">ゲーム情報の読み込みに失敗しました。</div>';
+    });
+</script>
+
+</body>
+</html>
