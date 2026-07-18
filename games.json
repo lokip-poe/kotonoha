@@ -1,0 +1,257 @@
+[
+  {
+    "id": "nanja-monja",
+    "name": "ナンジャモンジャ",
+    "name_en": "Nanja Monja",
+    "age_min": 4,
+    "players_min": 2,
+    "players_max": 6,
+    "time_min": 15,
+    "difficulty": 1,
+    "genre": [
+      "記憶力",
+      "とっさの一言"
+    ],
+    "image": "game-nanjamonja.jpg",
+    "popup_pdf": "popups/nanja-monja.pdf"
+  },
+  {
+    "id": "rhino-hero",
+    "name": "キャプテンリノ",
+    "name_en": "Rhino Hero",
+    "age_min": 5,
+    "players_min": 2,
+    "players_max": 5,
+    "time_min": 5,
+    "difficulty": 1,
+    "genre": [
+      "バランス",
+      "積み上げ"
+    ],
+    "image": "game-rhino-front.jpg",
+    "popup_pdf": "popups/rhino-hero.pdf"
+  },
+  {
+    "id": "woodman",
+    "name": "ウッドマン",
+    "name_en": "Toc Toc Woodman",
+    "age_min": 5,
+    "players_min": 2,
+    "players_max": 7,
+    "time_min": 10,
+    "difficulty": 2,
+    "genre": [
+      "アクション",
+      "タイミング"
+    ],
+    "image": "game-woodman.jpg",
+    "popup_pdf": "popups/woodman.pdf"
+  },
+  {
+    "id": "dobble",
+    "name": "ドブル",
+    "name_en": "Dobble / Spot it!",
+    "age_min": 6,
+    "players_min": 2,
+    "players_max": 8,
+    "time_min": 15,
+    "difficulty": 1,
+    "genre": [
+      "反射神経",
+      "スピード"
+    ],
+    "image": "game-dobble.jpg",
+    "popup_pdf": "popups/dobble.pdf"
+  },
+  {
+    "id": "jenga",
+    "name": "ジェンガ",
+    "name_en": "Jenga",
+    "age_min": 6,
+    "players_min": 1,
+    "players_max": null,
+    "time_min": 15,
+    "difficulty": 2,
+    "genre": [
+      "バランス",
+      "ハラハラ"
+    ],
+    "image": "game-jenga.jpg",
+    "popup_pdf": "popups/jenga.pdf"
+  },
+  {
+    "id": "sticky",
+    "name": "スティッキー",
+    "name_en": "Zitternix",
+    "age_min": 6,
+    "players_min": 2,
+    "players_max": 4,
+    "time_min": 15,
+    "difficulty": 2,
+    "genre": [
+      "バランス",
+      "スピード"
+    ],
+    "image": "game-sticky.jpg",
+    "popup_pdf": "popups/sticky.pdf"
+  },
+  {
+    "id": "balance-blocks",
+    "name": "バランスブロック",
+    "name_en": "Balance Blocks",
+    "age_min": 6,
+    "players_min": 2,
+    "players_max": null,
+    "time_min": 15,
+    "difficulty": 2,
+    "genre": [
+      "バランス",
+      "積み上げ"
+    ],
+    "image": "game-balanceblocks.jpg",
+    "popup_pdf": "popups/balance-blocks.pdf"
+  },
+  {
+    "id": "ok-play",
+    "name": "OKゲーム",
+    "name_en": "OK Play",
+    "age_min": 6,
+    "players_min": 2,
+    "players_max": 4,
+    "time_min": 10,
+    "difficulty": 2,
+    "genre": [
+      "頭を使う",
+      "五目並べ"
+    ],
+    "image": "game-okplay.jpg",
+    "popup_pdf": "popups/ok-play.pdf"
+  },
+  {
+    "id": "hiragajan",
+    "name": "ひらがじゃん",
+    "name_en": "Hiragajyan",
+    "age_min": 7,
+    "players_min": 2,
+    "players_max": 4,
+    "time_min": 30,
+    "difficulty": 2,
+    "genre": [
+      "ことばの力"
+    ],
+    "image": "game-hiragajan-hai.jpg",
+    "popup_pdf": "popups/hiragajan.pdf"
+  },
+  {
+    "id": "ubongo-mini",
+    "name": "ウボンゴミニ",
+    "name_en": "Ubongo Mini",
+    "age_min": 7,
+    "players_min": 1,
+    "players_max": 4,
+    "time_min": 15,
+    "difficulty": 1,
+    "genre": [
+      "パズル",
+      "スピード"
+    ],
+    "image": "game-ubongomini.jpg",
+    "popup_pdf": "popups/ubongo-mini.pdf"
+  },
+  {
+    "id": "ubongo-pokemon",
+    "name": "ウボンゴ ポケモン",
+    "name_en": "Ubongo Pokémon",
+    "age_min": 7,
+    "players_min": 1,
+    "players_max": 4,
+    "time_min": 15,
+    "difficulty": 2,
+    "genre": [
+      "パズル",
+      "集中力"
+    ],
+    "image": "game-ubongopokemon.jpg",
+    "popup_pdf": "popups/ubongo-pokemon.pdf"
+  },
+  {
+    "id": "ubongo",
+    "name": "ウボンゴ",
+    "name_en": "Ubongo",
+    "age_min": 8,
+    "players_min": 2,
+    "players_max": 4,
+    "time_min": 25,
+    "difficulty": 2,
+    "genre": [
+      "パズル",
+      "集中力"
+    ],
+    "image": "game-ubongo.jpg",
+    "popup_pdf": "popups/ubongo.pdf"
+  },
+  {
+    "id": "obake-catch",
+    "name": "おばけキャッチ",
+    "name_en": "Ghost Blitz",
+    "age_min": 8,
+    "players_min": 2,
+    "players_max": 8,
+    "time_min": 20,
+    "difficulty": 2,
+    "genre": [
+      "反射神経",
+      "とっさの判断"
+    ],
+    "image": "game-obakecatch.jpg",
+    "popup_pdf": "popups/obake-catch.pdf"
+  },
+  {
+    "id": "ito",
+    "name": "ito",
+    "name_en": "ito",
+    "age_min": 8,
+    "players_min": 2,
+    "players_max": 10,
+    "time_min": 30,
+    "difficulty": 2,
+    "genre": [
+      "協力",
+      "ことば"
+    ],
+    "image": "game-ito-front.jpg",
+    "popup_pdf": "popups/ito.pdf"
+  },
+  {
+    "id": "magnet-chess",
+    "name": "磁気チェス",
+    "name_en": "Magnetic Stones",
+    "age_min": 8,
+    "players_min": 2,
+    "players_max": null,
+    "time_min": 10,
+    "difficulty": 2,
+    "genre": [
+      "集中力",
+      "そっと置く"
+    ],
+    "image": "game-magnetchess.jpg",
+    "popup_pdf": "popups/magnet-chess.pdf"
+  },
+  {
+    "id": "stick-stack",
+    "name": "STICK STACK",
+    "name_en": "スティックスタック",
+    "age_min": 8,
+    "players_min": 2,
+    "players_max": 8,
+    "time_min": 15,
+    "difficulty": 3,
+    "genre": [
+      "バランス",
+      "色あわせ"
+    ],
+    "image": "game-stickstack.jpg",
+    "popup_pdf": "popups/stick-stack.pdf"
+  }
+]
