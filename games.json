@@ -243,5 +243,205 @@
     ],
     "image": "game-stickstack.jpg",
     "popup_pdf": "popups/stick-stack.pdf"
+  },
+  {
+    "id": "doubutsu-sagashi",
+    "name": "動物さがし",
+    "name_en": "Solche Strolche",
+    "age_min": 4,
+    "players_min": 2,
+    "players_max": 8,
+    "time_min": 15,
+    "difficulty": 1,
+    "genre": [
+      "スピード・反射神経"
+    ],
+    "image": "game-doubutsusagashi.jpg",
+    "popup_pdf": "popups/doubutsu-sagashi.pdf"
+  },
+  {
+    "id": "mugen-machigai",
+    "name": "無限まちがいさがし",
+    "name_en": "Mugen Machigai Sagashi",
+    "age_min": 5,
+    "players_min": 1,
+    "players_max": 4,
+    "time_min": 10,
+    "difficulty": 1,
+    "genre": [
+      "スピード・反射神経"
+    ],
+    "image": "game-mugenmachigai.jpg",
+    "popup_pdf": "popups/mugen-machigai.pdf"
+  },
+  {
+    "id": "bandido",
+    "name": "バンディド",
+    "name_en": "Bandido",
+    "age_min": 5,
+    "players_min": 1,
+    "players_max": 4,
+    "time_min": 15,
+    "difficulty": 1,
+    "genre": [
+      "協力プレイ",
+      "パズル・頭脳"
+    ],
+    "image": "game-bandido.jpg",
+    "popup_pdf": "popups/bandido.pdf"
+  },
+  {
+    "id": "halli-galli",
+    "name": "ハリガリ",
+    "name_en": "Halli Galli",
+    "age_min": 6,
+    "players_min": 2,
+    "players_max": 6,
+    "time_min": 15,
+    "difficulty": 2,
+    "genre": [
+      "スピード・反射神経"
+    ],
+    "image": "game-halligalli.jpg",
+    "popup_pdf": "popups/halli-galli.pdf"
+  },
+  {
+    "id": "rainbow-unbalance",
+    "name": "レインボーアンバランス",
+    "name_en": "Rainbow Unbalance",
+    "age_min": 6,
+    "players_min": 1,
+    "players_max": null,
+    "time_min": 10,
+    "difficulty": 2,
+    "genre": [
+      "バランス・集中"
+    ],
+    "image": "game-rainbow-unbalance.jpg",
+    "popup_pdf": "popups/rainbow-unbalance.pdf"
+  },
+  {
+    "id": "word-sniper",
+    "name": "ワードスナイパー",
+    "name_en": "Word Sniper",
+    "age_min": 6,
+    "players_min": 2,
+    "players_max": 6,
+    "time_min": 10,
+    "difficulty": 2,
+    "genre": [
+      "ことば・コミュニケーション",
+      "スピード・反射神経"
+    ],
+    "image": "game-wordsniper.jpg",
+    "popup_pdf": "popups/word-sniper.pdf"
+  },
+  {
+    "id": "onsoku-hanten",
+    "name": "音速飯店",
+    "name_en": "Onsoku Hanten",
+    "age_min": 6,
+    "players_min": 2,
+    "players_max": 6,
+    "time_min": 15,
+    "difficulty": 2,
+    "genre": [
+      "ことば・コミュニケーション",
+      "スピード・反射神経"
+    ],
+    "image": "game-onsokuhanten.jpg",
+    "popup_pdf": "popups/onsoku-hanten.pdf"
+  },
+  {
+    "id": "yubibo",
+    "name": "ユビボー",
+    "name_en": "Yubibo",
+    "age_min": 6,
+    "players_min": 2,
+    "players_max": 8,
+    "time_min": 5,
+    "difficulty": 2,
+    "genre": [
+      "協力プレイ",
+      "バランス・集中"
+    ],
+    "image": "game-yubibo.jpg",
+    "popup_pdf": "popups/yubibo.pdf"
+  },
+  {
+    "id": "sanrentan",
+    "name": "サンレンタン",
+    "name_en": "Sanrentan",
+    "age_min": 8,
+    "players_min": 2,
+    "players_max": 6,
+    "time_min": 15,
+    "difficulty": 2,
+    "genre": [
+      "ことば・コミュニケーション"
+    ],
+    "image": "game-sanrentan.jpg",
+    "popup_pdf": "popups/sanrentan.pdf"
+  },
+  {
+    "id": "tummple",
+    "name": "タンプル",
+    "name_en": "tummple!",
+    "age_min": 8,
+    "players_min": 2,
+    "players_max": 4,
+    "time_min": 20,
+    "difficulty": 3,
+    "genre": [
+      "バランス・集中"
+    ],
+    "image": "game-tummple.jpg",
+    "popup_pdf": "popups/tummple.pdf"
+  },
+  {
+    "id": "time-bomb",
+    "name": "タイムボム",
+    "name_en": "Time Bomb",
+    "age_min": 10,
+    "players_min": 2,
+    "players_max": 8,
+    "time_min": 10,
+    "difficulty": 2,
+    "genre": [
+      "協力プレイ"
+    ],
+    "image": "game-timebomb.jpg",
+    "popup_pdf": "popups/time-bomb.pdf"
+  },
+  {
+    "id": "eigo-dake",
+    "name": "エイゴダーケ",
+    "name_en": "Eigo Dake",
+    "age_min": 10,
+    "players_min": 3,
+    "players_max": 8,
+    "time_min": 15,
+    "difficulty": 2,
+    "genre": [
+      "ことば・コミュニケーション"
+    ],
+    "image": "game-eigodake.jpg",
+    "popup_pdf": "popups/eigo-dake.pdf"
+  },
+  {
+    "id": "nine-tile-pokemon",
+    "name": "ナインタイル ポケモンドコダ！",
+    "name_en": "Nine Tile Pokemon Dokoda",
+    "age_min": 6,
+    "players_min": 2,
+    "players_max": 4,
+    "time_min": 15,
+    "difficulty": 2,
+    "genre": [
+      "パズル・頭脳",
+      "スピード・反射神経"
+    ],
+    "image": "game-ninetile-pokemon.jpg",
+    "popup_pdf": "popups/nine-tile-pokemon.pdf"
   }
 ]
