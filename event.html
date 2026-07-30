@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>イベント｜コトノハ</title>
-<meta name="description" content="コトノハ お試し体験会。7月26日（日）加茂文化センターでボードゲームを楽しみましょう。参加無料・要予約。">
+<title>開催レポート｜コトノハ</title>
+<meta name="description" content="2026年7月26日、コトノハ ボードゲーム体験会を加茂文化センターで開催しました。当日の様子をレポートします。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
@@ -48,40 +48,37 @@
     color: var(--text-soft);
     margin-top: 0.1rem;
   }
-  .map-btn {
-    display: inline-flex;
-    align-items: center;
-    background: #4285f4;
-    color: white;
-    padding: 0.75rem 1.5rem;
-    border-radius: 9999px;
-    font-weight: 500;
-    font-size: 0.95rem;
-    margin-top: 1rem;
-    transition: opacity 0.2s;
-  }
-  .map-btn:hover { opacity: 0.85; color: white; }
-  .parking-note {
-    margin-top: 0.75rem;
-    font-size: 0.85rem;
-    color: var(--text-soft);
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 0.75rem 1rem;
-    line-height: 1.7;
-  }
-  .parking-note strong { color: var(--accent); }
-  .parking-img-wrap {
-    margin-top: 0.75rem;
-    border-radius: 12px;
-    overflow: hidden;
-    border: 1px solid var(--border);
-  }
-  .parking-img-wrap img {
+  .hero-photo {
     width: 100%;
-    height: auto;
-    display: block;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+  .hero-photo img { width: 100%; display: block; }
+  .photo-caption {
+    font-size: 0.8rem;
+    color: var(--text-soft);
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+  .signboard-row {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 1rem;
+  }
+  .signboard-row img {
+    width: 90px;
+    height: 68px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    flex-shrink: 0;
+  }
+  .signboard-row p {
+    font-size: 0.9rem;
+    color: var(--text-soft);
+    line-height: 1.7;
   }
   .game-grid {
     display: grid;
@@ -115,6 +112,28 @@
     line-height: 1.5;
     margin: 0;
   }
+  .also-played {
+    margin-top: 1rem;
+    font-size: 0.88rem;
+    color: var(--text-soft);
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 0.85rem 1.1rem;
+    line-height: 1.8;
+  }
+  .also-played strong { color: var(--accent); }
+  .voice-list { margin-top: 1rem; }
+  .voice-box {
+    background: var(--card);
+    border-left: 4px solid var(--accent);
+    border-radius: 0 10px 10px 0;
+    padding: 0.85rem 1.1rem;
+    margin-bottom: 0.7rem;
+    font-size: 0.92rem;
+    line-height: 1.7;
+    box-shadow: var(--shadow);
+  }
   .flyer-link {
     display: inline-block;
     border: 2px solid var(--accent);
@@ -126,23 +145,6 @@
     transition: all 0.2s;
   }
   .flyer-link:hover { background: var(--accent); color: white; }
-  .reserve-phone {
-    margin-top: 1.25rem;
-    font-size: 0.95rem;
-    color: var(--text-soft);
-  }
-  .reserve-phone strong {
-    font-size: 1.3rem;
-    color: var(--text);
-    display: block;
-    margin-top: 0.2rem;
-  }
-  .reserve-note {
-    margin-top: 0.75rem;
-    font-size: 0.82rem;
-    color: var(--text-soft);
-    line-height: 1.7;
-  }
 </style>
 </head>
 <body>
@@ -162,18 +164,25 @@
 </nav>
 
 <div class="page-header">
-  <h1>ボードゲーム体験会</h1>
-  <p>コトノハ、はじめの一歩。多世代で笑い合う、お試し開催です。</p>
+  <h1>ボードゲーム体験会 開催レポート</h1>
+  <p>2026年7月26日、加茂文化センターで「コトノハ」はじめの一歩を踏み出しました。</p>
 </div>
+
+<section class="section" style="padding-top: 0;">
+  <div class="hero-photo">
+    <img src="photo-0726-group.jpg" alt="体験会の様子">
+  </div>
+  <div class="signboard-row">
+    <img src="photo-event-signboard.jpg" alt="手作りの案内看板">
+    <p>会場の入り口には、手作りの案内看板もお目見え。当日はこの看板を目印に集まっていただきました。</p>
+  </div>
+</section>
 
 <section class="section" style="padding-top: 0;">
   <div class="event-info">
     <div class="event-info-row">
       <span class="event-label">日時</span>
-      <span class="event-value">
-        <strong>2026年7月26日（日）13:30〜15:30</strong>
-        <span class="note">※会場 13:00〜16:00</span>
-      </span>
+      <span class="event-value"><strong>2026年7月26日（日）13:30〜15:30</strong></span>
     </div>
     <div class="event-info-row">
       <span class="event-label">場所</span>
@@ -183,110 +192,91 @@
       </span>
     </div>
     <div class="event-info-row">
-      <span class="event-label">対象</span>
+      <span class="event-label">参加</span>
       <span class="event-value">
-        どなたでも
-        <span class="note">小学生は保護者同伴 / 60代以上のシニアの方歓迎</span>
+        <strong>合計9名</strong>
+        <span class="note">参加者7名（60代以上2名・40代1名・30代1名・20代1名・お子さま2名〈5歳・6歳〉）＋スタッフ2名</span>
       </span>
     </div>
     <div class="event-info-row">
-      <span class="event-label">参加費</span>
-      <span class="event-value"><strong>無料</strong></span>
-    </div>
-    <div class="event-info-row">
-      <span class="event-label">定員</span>
-      <span class="event-value">
-        <strong>20名（先着順・要予約）</strong>
-        <span class="note">持ち物なし、手ぶらでOK</span>
-      </span>
+      <span class="event-label">後援</span>
+      <span class="event-value">木津川市社会福祉協議会</span>
     </div>
   </div>
 </section>
 
 <section class="section" style="padding-top: 0;">
-  <h2>会場・アクセス</h2>
-  <p>加茂文化センター プレイルーム（京都府木津川市加茂町）</p>
-  <a class="map-btn" href="https://maps.google.com/?q=木津川市加茂文化センター" target="_blank">Googleマップで見る</a>
-
-  <h2 style="margin-top: 2rem;">駐車場のご案内</h2>
-  <div class="parking-note">
-    <strong>センター専用駐車場（北・西）</strong>をご利用ください。<br>
-    近隣の病院・月極・JAの駐車場は利用不可です（地図内×印）。
-  </div>
-  <div class="parking-img-wrap">
-    <img src="parking.jpeg" alt="駐車場案内図">
-  </div>
-</section>
-
-<section class="section" style="padding-top: 0;">
-  <h2>遊ぶゲーム（予定）</h2>
-  <p style="color: var(--text-soft); font-size: 0.95rem;">どれもルールが簡単で、初対面でもすぐ盛り上がれます。</p>
+  <h2>遊んだゲーム</h2>
+  <p style="color: var(--text-soft); font-size: 0.95rem;">世代を超えて、いろんなゲームで盛り上がりました。</p>
   <div class="game-grid">
     <div class="game-card">
-      <img src="game-ubongo.jpg" alt="ウボンゴ">
+      <img src="photo-0726-magnetchess.jpg" alt="磁気チェスで遊ぶ様子">
       <div class="game-card-body">
-        <h3>ウボンゴ</h3>
-        <p>パズルでスピード勝負。</p>
+        <h3>磁気チェス</h3>
+        <p>ルールが単純で好評でした。</p>
       </div>
     </div>
     <div class="game-card">
-      <img src="game-dobble.jpg" alt="ドブル">
+      <img src="photo-0726-obakecatch.jpg" alt="おばけキャッチで遊ぶ様子">
       <div class="game-card-body">
-        <h3>ドブル</h3>
-        <p>同じ絵を見つける反射神経ゲーム。</p>
+        <h3>おばけキャッチ</h3>
+        <p>子どもたちが夢中になっていました。</p>
+      </div>
+    </div>
+    <div class="game-card">
+      <img src="photo-0726-rhino.jpg" alt="キャプテンリノで遊ぶ様子">
+      <div class="game-card-body">
+        <h3>キャプテンリノ</h3>
+        <p>崩れる瞬間はみんなで大笑い。</p>
       </div>
     </div>
     <div class="game-card">
       <img src="game-jenga.jpg" alt="ジェンガ">
       <div class="game-card-body">
         <h3>ジェンガ</h3>
-        <p>ハラハラ崩さず積み木を抜く。</p>
+        <p>定番の積み木くずしも登場。</p>
       </div>
     </div>
-    <div class="game-card">
-      <img src="game-stickstack.jpg" alt="STICK STACK">
-      <div class="game-card-body">
-        <h3>STICK STACK</h3>
-        <p>バランスを取りながら棒を積む。</p>
-      </div>
-    </div>
+  </div>
+  <div class="also-played">
+    <strong>他にも遊びました：</strong>STICK STACK、ドブル、スティッキー、ウッドマン、ito、きらめく財宝
   </div>
 </section>
 
 <section class="section" style="padding-top: 0;">
-  <h2>こんな雰囲気です</h2>
+  <h2>参加者の声</h2>
+  <div class="voice-list">
+    <div class="voice-box">「子供たちがとても喜んでいました。年齢関係なく交流ができると思いました。」</div>
+    <div class="voice-box">「磁石のゲームが単純で楽しかった。」</div>
+    <div class="voice-box">「サロンの中で遊ぶと喜ばれる。」</div>
+  </div>
+</section>
+
+<section class="section" style="padding-top: 0;">
+  <h2>当日の様子</h2>
   <ul class="rule-list">
     <li>
-      <strong>あだ名で呼び合って、世代を超えてワイワイ</strong>
-      <span>おじいちゃんも、子どもも、みんなフラットに。</span>
+      <strong>60代の方から5歳のお子さんまで、世代を超えてワイワイ</strong>
+      <span>あだ名で呼び合いながら、おじいちゃんも子どもも、みんなフラットに楽しみました。</span>
     </li>
     <li>
-      <strong>勝ち負け関係なく、みんなで笑い合う時間</strong>
-      <span>競争よりも、一緒に楽しむことを大切にします。</span>
+      <strong>地元の「狐のボードゲームクラブ」さんも遊びに来てくれました</strong>
+      <span>木津川市社会福祉協議会さんの後援もいただいての開催でした。</span>
     </li>
     <li>
-      <strong>最後にみんなで感想シェア</strong>
-      <span>「楽しかった！」をみんなで分かち合う時間を作ります。</span>
+      <strong>勝ち負け関係なく、みんなで笑い合う時間に</strong>
+      <span>最後はみんなで感想をシェアし、「楽しかった！」を分かち合いました。</span>
     </li>
   </ul>
 </section>
 
 <div class="cta-end">
-  <h3>参加のご予約</h3>
-  <p>定員20名・先着順です。お早めにどうぞ！</p>
-  <a href="https://forms.gle/bBvpiXA9TEc5bQug6" target="_blank" class="btn">予約フォームから申し込む</a>
-  <p class="reserve-phone">
-    お電話でも受け付けています
-    <strong>090-5656-3539</strong>
-    <span style="font-size: 0.88rem;">（9:00〜20:00）</span>
-  </p>
-  <p class="reserve-note">
-    ※会場は催事と一切関係がございません<br>
-    ※会場への直接のお問い合わせはご遠慮ください
-  </p>
+  <h3>次回のイベント</h3>
+  <p>8月は「夏休みボードゲーム涼み処」を開催します！</p>
+  <a href="summer.html" class="btn">涼み処の詳細を見る</a>
   <div style="margin-top: 1.5rem; border-top: 1px solid var(--border); padding-top: 1.25rem;">
-    <p style="margin-bottom: 0.75rem; color: var(--text-soft); font-size: 0.9rem;">チラシはこちらから印刷できます</p>
-    <a href="event-flyer_1.html" target="_blank" class="flyer-link">チラシを開く（印刷用）</a>
+    <p style="margin-bottom: 0.75rem; color: var(--text-soft); font-size: 0.9rem;">最新情報・資料はこちらから</p>
+    <a href="info.html" class="flyer-link">リンク集を見る</a>
   </div>
 </div>
 
