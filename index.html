@@ -12,6 +12,56 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<style>
+  .proof-section {
+    padding: 2.5rem 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .proof-box {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    padding: 1.75rem 1.5rem;
+  }
+  .proof-tag {
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--accent);
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  .proof-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    text-align: center;
+  }
+  .proof-stat .num {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent);
+  }
+  .proof-stat .label {
+    font-size: 0.78rem;
+    color: var(--text-soft);
+    margin-top: 0.2rem;
+    line-height: 1.5;
+  }
+  .proof-link {
+    text-align: center;
+    margin-top: 1.25rem;
+  }
+  .proof-link a { font-weight: 500; font-size: 0.92rem; }
+  .cta-multi {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+    margin-top: 0.5rem;
+  }
+</style>
 </head>
 <body>
 
@@ -40,6 +90,27 @@
     年齢のちがう人どうしが、自然と『友達』になれる場所。
   </p>
   <a href="details.html" class="hero-cta">どんな場所か見る →</a>
+</section>
+
+<section class="proof-section">
+  <div class="proof-box">
+    <div class="proof-tag">木津川市加茂町エリアで、すでに活動しています</div>
+    <div class="proof-stats">
+      <div class="proof-stat">
+        <div class="num">9名</div>
+        <div class="label">7/26 体験会<br>参加</div>
+      </div>
+      <div class="proof-stat">
+        <div class="num">3回</div>
+        <div class="label">夏休み<br>涼み処 開催</div>
+      </div>
+      <div class="proof-stat">
+        <div class="num">後援</div>
+        <div class="label">木津川市<br>社会福祉協議会</div>
+      </div>
+    </div>
+    <p class="proof-link"><a href="info.html">これまでの活動レポートを見る →</a></p>
+  </div>
 </section>
 
 <section class="section">
@@ -138,9 +209,13 @@
 </section>
 
 <div class="cta-end">
-  <h3>くわしく知りたい方へ</h3>
-  <p>はじまりのストーリー、場所のルール、料金、安全管理の仕組みなど、具体的な内容をまとめました。</p>
-  <a href="details.html" class="btn">くわしく見る</a>
+  <h3>もっと知りたい方へ</h3>
+  <p>はじまりのストーリー、料金・安全管理の仕組み、これまでの活動、出張サービスなど、知りたいことに合わせてどうぞ。</p>
+  <div class="cta-multi">
+    <a href="details.html" class="btn">くわしく見る</a>
+    <a href="info.html" class="btn btn-outline">実施レポートを見る</a>
+    <a href="delivery.html" class="btn btn-outline">出張サービスについて</a>
+  </div>
   <p class="cta-note">※クラウドファンディング準備中です</p>
 </div>
 
