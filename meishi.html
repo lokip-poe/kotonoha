@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>東 正輝｜コトノハ準備会</title>
+<meta name="description" content="コトノハ準備会 代表 東正輝のWeb名刺">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .meishi-wrap {
+    max-width: 420px;
+    margin: 3rem auto;
+    padding: 0 1.25rem 3rem;
+    text-align: center;
+  }
+  .meishi-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 2.5rem 1.75rem 2rem;
+    box-shadow: var(--shadow);
+  }
+  .meishi-photo {
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--card);
+    box-shadow: 0 4px 20px rgba(61, 47, 36, 0.18);
+    margin: 0 auto 1.25rem;
+    display: block;
+  }
+  .meishi-role {
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+  }
+  .meishi-name {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  .meishi-org {
+    color: var(--text-soft);
+    font-size: 0.95rem;
+    margin-bottom: 0.4rem;
+  }
+  .meishi-tagline {
+    color: var(--text-soft);
+    font-size: 0.9rem;
+    margin-bottom: 1.75rem;
+  }
+  .meishi-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+  .meishi-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    background: var(--accent);
+    color: white;
+    padding: 0.85rem 1rem;
+    border-radius: 9999px;
+    font-weight: 500;
+    font-size: 0.95rem;
+  }
+  .meishi-btn:hover { background: var(--accent-hover); color: white; }
+  .meishi-btn.outline {
+    background: transparent;
+    color: var(--accent);
+    border: 2px solid var(--accent);
+    padding: 0.75rem 1rem;
+  }
+  .meishi-btn.outline:hover { background: var(--accent); color: white; }
+  .meishi-note {
+    margin-top: 1.5rem;
+    font-size: 0.8rem;
+    color: var(--text-soft);
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-brand"><span class="dot"></span>コトノハ</div>
+    <div class="nav-links">
+      <a href="index.html">ホーム</a>
+      <a href="info.html">リンク集</a>
+    </div>
+  </div>
+</nav>
+
+<div class="meishi-wrap">
+  <div class="meishi-card">
+    <img class="meishi-photo" src="profile-higashi.jpg" alt="東 正輝">
+    <div class="meishi-role">代表</div>
+    <div class="meishi-name">東　正輝</div>
+    <div class="meishi-org">コトノハ準備会</div>
+    <div class="meishi-tagline">ボードゲームでつなぐ、多世代の居場所</div>
+
+    <div class="meishi-actions">
+      <a class="meishi-btn" href="higashi.vcf" download>📇 連絡先に保存</a>
+      <a class="meishi-btn outline" href="tel:09056563539">📞 電話をかける</a>
+      <a class="meishi-btn outline" href="mailto:kotonoha.kizugawa@gmail.com">✉️ メールを送る</a>
+      <a class="meishi-btn outline" href="https://www.instagram.com/kotonoha_kizugawa" target="_blank" rel="noopener">📷 Instagram</a>
+      <a class="meishi-btn outline" href="index.html">🏠 コトノハ サイトを見る</a>
+    </div>
+
+    <p class="meishi-note">京都府木津川市加茂町｜多世代交流の居場所づくりを準備中</p>
+  </div>
+</div>
+
+<footer>
+  <div class="brand">コトノハ</div>
+  <div>京都府 木津川市</div>
+  <div style="margin-top: 0.5rem;">© 2026 コトノハ</div>
+</footer>
+
+</body>
+</html>
