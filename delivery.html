@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>出張ボードゲーム交流会｜コトノハ</title>
-<meta name="description" content="コトノハが公民館・老人クラブ・デイサービス・学童など、地域のあらゆる場所にボードゲームを持って伺います。初回無料で体験いただけます。">
+<meta name="description" content="老人クラブ・デイサービスのレクリエーション担当者様へ。出張ボードゲーム交流会、初回無料でお試しいただけます。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y83RJZX4J5"></script>
 <script>
@@ -16,133 +16,301 @@
   gtag('js', new Date());
   gtag('config', 'G-Y83RJZX4J5');
 </script>
+<style>
+  .mini-nav {
+    padding: 1rem 1.5rem;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+    background: var(--card);
+  }
+  .mini-nav a.nav-brand {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--text);
+  }
+  .mini-nav .dot {
+    display: inline-block;
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+    margin-right: 0.5rem;
+  }
+
+  /* ファーストビュー */
+  .fv {
+    padding: 3rem 1.5rem 2.5rem;
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .fv h1 {
+    font-size: 1.9rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+  .fv h1 .accent { color: var(--accent); }
+  .fv-sub {
+    color: var(--text-soft);
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    line-height: 1.8;
+  }
+  .cta-row {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .cta-row .btn { font-size: 1rem; }
+  .cta-note-small {
+    font-size: 0.8rem;
+    color: var(--text-soft);
+    margin-top: 0.75rem;
+  }
+
+  /* 課題提起 */
+  .pain-section {
+    background: var(--card);
+    padding: 3rem 1.5rem;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+  .pain-inner { max-width: 720px; margin: 0 auto; }
+  .pain-inner h2 {
+    text-align: center;
+    font-size: 1.35rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+  .pain-list {
+    display: grid;
+    gap: 0.9rem;
+  }
+  .pain-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+    font-size: 0.98rem;
+  }
+  .pain-item .mark {
+    color: #c0391b;
+    font-weight: 900;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+  }
+
+  /* 実績バッジ */
+  .proof-inline {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    max-width: 720px;
+    margin: 2rem auto 0;
+  }
+  .proof-inline .num { font-size: 1.4rem; font-weight: 700; color: var(--accent); text-align: center; }
+  .proof-inline .label { font-size: 0.76rem; color: var(--text-soft); text-align: center; margin-top: 0.2rem; line-height: 1.5; }
+
+  .mid-cta { text-align: center; padding: 2.5rem 1.5rem; }
+
+  .phone-row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .phone-row .phone-item {
+    width: 66px;
+    height: 88px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  .phone-row img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    opacity: 0.88;
+  }
+  .together-photo {
+    max-width: 640px;
+    margin: 2rem auto 0;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 0.6rem;
+  }
+  .together-photo > div {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+  }
+  .together-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .together-caption {
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--text-soft);
+    margin-top: 0.6rem;
+  }
+</style>
 </head>
 <body>
 
-<nav class="nav">
-  <div class="nav-inner">
-    <div class="nav-brand"><span class="dot"></span>コトノハ</div>
-    <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox">
-    <label for="nav-toggle" class="nav-toggle-btn">☰</label>
-    <div class="nav-links">
-      <a href="index.html">ホーム</a>
-      <a href="details.html">くわしく</a>
-      <a href="delivery.html" style="color: var(--accent); font-weight: 700;">出張サービス</a>
-      <a href="info.html">実施レポート</a>
-      <a href="links.html">リンク集</a>
-    </div>
+<div class="mini-nav">
+  <a class="nav-brand" href="index.html"><span class="dot"></span>コトノハ</a>
+</div>
+
+<!-- ファーストビュー -->
+<section class="fv">
+  <h1>スマホの画面より、<br><span class="accent">目の前の誰か</span>と。</h1>
+  <p class="fv-sub">
+    ボードゲームを持って、老人クラブ・デイサービスに伺います。<br>
+    ルール説明から進行まで、すべてお任せください。<br>
+    <strong>初回は無料</strong>でお試しいただけます。
+  </p>
+  <div class="cta-row">
+    <a href="tel:090-5656-3539" class="btn">📞 090-5656-3539</a>
+    <a href="mailto:kotonoha.kizugawa@gmail.com" class="btn btn-outline">メールで相談</a>
   </div>
-</nav>
+  <p class="cta-note-small">受付時間：9:00〜20:00　／　木津川市・加茂エリア中心に対応</p>
+</section>
 
-<header class="page-header">
-  <h1>出張ボードゲーム交流会</h1>
-  <p>ボードゲームを持って、あなたの場所に伺います。<br>公民館・老人クラブ・デイサービス・学童・企業など、どこでも。</p>
-</header>
-
-<section class="section">
-  <h2>こんな場所に伺えます</h2>
-  <p>「ウチでもやってほしい」という声があれば、どこでも伺います。初回は通常料金の半額でお試しいただけます。</p>
-  <div class="cards">
-    <div class="card">
-      <span class="icon">🏛️</span>
-      <h3>公民館・自治会</h3>
-      <p>地域の集まりや定例会に。世代を超えた交流のきっかけに。</p>
+<!-- 課題提起 -->
+<section class="pain-section">
+  <div class="pain-inner">
+    <div class="phone-row">
+      <div class="phone-item"><img src="irasutoya/smartphone_boy_stand.png" alt=""></div>
+      <div class="phone-item"><img src="irasutoya/smartphone_girl_stand.png" alt=""></div>
+      <div class="phone-item"><img src="irasutoya/smartphone4_woman.png" alt=""></div>
+      <div class="phone-item"><img src="irasutoya/smartphone5_ojisan.png" alt=""></div>
+      <div class="phone-item"><img src="irasutoya/smartphone6_obasan.png" alt=""></div>
+      <div class="phone-item"><img src="irasutoya/smartphone7_ojiisan.png" alt=""></div>
+      <div class="phone-item"><img src="irasutoya/smartphone8_obaasan.png" alt=""></div>
     </div>
-    <div class="card">
-      <span class="icon">🧓</span>
-      <h3>老人クラブ・シニアサロン</h3>
-      <p>脳トレ・認知症予防として。難しいルールは一切不要です。</p>
+    <h2>気づけば、みんなスマホを見ている。<br>そんな時間、増えていませんか？</h2>
+    <div class="pain-list">
+      <div class="pain-item"><span class="mark">・</span><span>家族と一緒にいても、それぞれが画面を見ている</span></div>
+      <div class="pain-item"><span class="mark">・</span><span>お年寄りは「話す相手」「行く場所」が少しずつ減っていく</span></div>
+      <div class="pain-item"><span class="mark">・</span><span>子どもは子ども同士、大人は大人同士で完結してしまう</span></div>
+      <div class="pain-item"><span class="mark">・</span><span>年齢や立場が違うと、そもそも共通の話題や遊びがない</span></div>
     </div>
-    <div class="card">
-      <span class="icon">🏥</span>
-      <h3>デイサービス・老人ホーム</h3>
-      <p>レクリエーションの一環として。スタッフの方も一緒に楽しめます。</p>
-    </div>
-    <div class="card">
-      <span class="icon">🎒</span>
-      <h3>放課後子ども教室・学童</h3>
-      <p>子どもたちの放課後に。協調性・思考力・コミュニケーション力を楽しく育てます。</p>
-    </div>
-    <div class="card">
-      <span class="icon">🏢</span>
-      <h3>企業・団体</h3>
-      <p>チームビルディング・新入社員研修に。ゲームを通じてチームの距離が縮まります。</p>
-    </div>
-    <div class="card">
-      <span class="icon">🌏</span>
-      <h3>その他・ご相談</h3>
-      <p>上記以外でもお気軽にご相談ください。できる限り対応します。</p>
-    </div>
+    <p style="text-align:center; margin-top: 1.75rem; color: var(--text-soft); font-size: 0.95rem; line-height: 1.9;">
+      共通の「言語」がないから、世代はどんどん分断されていく。<br>
+      スマホを見てる間だけ寂しさを忘れられても、画面を閉じればまたひとり。
+    </p>
   </div>
 </section>
 
+<!-- 解決策 -->
 <section class="section">
-  <h2>1回あたりの内容</h2>
-  <ul class="rule-list">
-    <li>
-      <strong>⏱ 所要時間：約2時間</strong>
-      <span>準備・片付けを含みます。延長もご相談ください。</span>
-    </li>
-    <li>
-      <strong>🎲 持参ゲーム：4〜5タイトル</strong>
-      <span>ウボンゴ・ドブル・ジェンガ・STICK STACKなど。ルール説明から全て担当します。事前にご要望があればお知らせください。</span>
-    </li>
-    <li>
-      <strong>👥 参加人数：8〜20名程度</strong>
-      <span>少人数でも大人数でも対応できます。それ以上の場合はご相談ください。</span>
-    </li>
-    <li>
-      <strong>🎤 進行：代表が全て担当</strong>
-      <span>ルール説明・グループ分け・盛り上げまで全て行います。準備はお部屋だけご用意ください。</span>
-    </li>
-  </ul>
+  <h2>1枚のカード、1個のサイコロが<br>「共通言語」になります</h2>
+  <p class="lead" style="text-align:center;">
+    ボードゲームは、年齢も立場も関係なく、同じテーブルで対等に笑い合える数少ない遊びです。<br>
+    ルールを覚えれば、おじいちゃんも子どもも、初対面同士も、みんな対等。
+  </p>
+  <div class="cards" style="margin-top: 2rem;">
+    <div class="card">
+      <span class="icon">🧠</span>
+      <h3>シニアの方には</h3>
+      <p>脳を使いながら誰かと笑い合う時間に。定期的に行う高齢者は認知症発症リスクが低いという研究報告もあります。</p>
+    </div>
+    <div class="card">
+      <span class="icon">🧒</span>
+      <h3>子どもたちには</h3>
+      <p>勝ち負け・交渉・ルールの中でのやりとりを通じて、非認知能力（交渉力・コミュニケーション力）が育ちます。</p>
+    </div>
+    <div class="card">
+      <span class="icon">🤝</span>
+      <h3>これからの時代だからこそ</h3>
+      <p>知識やAIに代替されない「人と目を見て関わる力」。AI時代に一番大事な力を、遊びながら自然に育みます。</p>
+    </div>
+  </div>
+  <div class="together-photo">
+    <div><img src="photo-0726-group.jpg" alt="7/26体験会、世代を超えて集まった参加者の様子"></div>
+    <div><img src="photo-0726-magnetchess.jpg" alt="磁気チェスで遊ぶ様子"></div>
+  </div>
+  <p class="together-caption">2026年7月26日の体験会。60代の方から5歳のお子さんまで、同じテーブルを囲みました。</p>
 </section>
 
+<!-- 実績・根拠 -->
+<section class="section" style="background: var(--card); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+  <h2>実施実績</h2>
+  <div class="voice-list" style="margin-top: 1rem;">
+    <div class="voice-box" style="background: white; border-left: 4px solid var(--accent); border-radius: 0 10px 10px 0; padding: 0.9rem 1.1rem; margin-bottom: 0.8rem; font-size: 0.95rem; box-shadow: var(--shadow);">
+      「子供たちがとても喜んでいました。年齢関係なく交流ができると思いました。」
+    </div>
+    <div class="voice-box" style="background: white; border-left: 4px solid var(--accent); border-radius: 0 10px 10px 0; padding: 0.9rem 1.1rem; font-size: 0.95rem; box-shadow: var(--shadow);">
+      「サロンの中で遊ぶと喜ばれる」
+    </div>
+  </div>
+  <div class="proof-inline">
+    <div><div class="num">9名</div><div class="label">7/26体験会<br>参加</div></div>
+    <div><div class="num">4.3<span style="font-size:0.9rem;">/5</span></div><div class="label">満足度<br>平均評価</div></div>
+    <div><div class="num">3件</div><div class="label">体験会・きずな食堂・<br>涼み処 実施</div></div>
+  </div>
+</section>
+
+<div class="mid-cta">
+  <a href="tel:090-5656-3539" class="btn">📞 まずは電話で相談してみる</a>
+</div>
+
+<!-- 料金 -->
 <section class="section">
   <h2>料金</h2>
-  <p>初回は通常料金の半額でお試しいただけます。「続けたい」と思っていただけたら、2回目からは通常料金でご案内します。</p>
+  <p>初回は無料でお試しいただけます（1施設1回限り）。「続けたい」と思っていただけたら、2回目からは下記料金でご案内します。</p>
   <div class="plans">
     <div class="plan featured">
       <div class="plan-discount">初回限定</div>
       <div class="plan-name">初回体験</div>
-      <div class="plan-price">半　額<span class="unit"></span></div>
-      <div class="plan-desc">初回は通常料金の半額でお試しいただけます。交通費は実費をご負担ください。</div>
+      <div class="plan-price">無　料<span class="unit"></span></div>
+      <div class="plan-desc">1施設1回限り。交通費は実費をご負担ください。</div>
     </div>
     <div class="plan">
-      <div class="plan-name">公民館・老人クラブ・学童</div>
+      <div class="plan-name">老人クラブ・公民館</div>
       <div class="plan-price">5,000<span class="unit">円〜 / 2時間</span></div>
-      <div class="plan-desc">＋交通費実費。継続利用の場合はご相談ください。</div>
+      <div class="plan-desc">＋交通費実費。継続利用の場合はご相談ください。<br><strong style="color: var(--accent);">10名でご参加なら、お一人あたり500円</strong></div>
     </div>
     <div class="plan">
       <div class="plan-name">デイサービス・老人ホーム</div>
       <div class="plan-price">10,000<span class="unit">円〜 / 2時間</span></div>
-      <div class="plan-desc">＋交通費実費。施設のレクリエーション予算から計上いただけます。</div>
-    </div>
-    <div class="plan">
-      <div class="plan-name">企業・団体</div>
-      <div class="plan-price">20,000<span class="unit">円〜 / 2時間</span></div>
-      <div class="plan-desc">＋交通費実費。内容・人数によってご相談ください。</div>
+      <div class="plan-desc">＋交通費実費。レクリエーション予算から計上いただけます。<br><strong style="color: var(--accent);">10名でご参加なら、お一人あたり1,000円</strong></div>
     </div>
   </div>
+  <p style="text-align:center; margin-top: 1.25rem; color: var(--text-soft); font-size: 0.88rem;">
+    ※人数が多いほど、お一人あたりの負担はさらに小さくなります
+  </p>
 </section>
 
-<section class="section">
-  <h2>出張レポート</h2>
-  <p>2026年7月29日、木津川市社会福祉協議会主催「きずな食堂」に出張しました。<a href="kizuna.html">当日の様子はこちら →</a></p>
+<!-- 不安解消 -->
+<section class="section" style="background: var(--card);">
+  <h2>よくあるご不安について</h2>
+  <ul class="rule-list">
+    <li>
+      <strong>準備は何が必要ですか？</strong>
+      <span>お部屋とテーブル・椅子だけご用意ください。ゲーム・進行はすべてこちらで持参・担当します。</span>
+    </li>
+    <li>
+      <strong>ボードゲームをやったことがない方ばかりですが大丈夫ですか？</strong>
+      <span>むしろそういった場所の方が多いです。ルールが単純なゲームから始めるので、初めての方も数分で参加いただけます。</span>
+    </li>
+    <li>
+      <strong>追加費用はかかりますか？</strong>
+      <span>表示の料金と交通費実費以外はいただきません。追加のオプション費用等は一切ありません。</span>
+    </li>
+    <li>
+      <strong>人数は何人からお願いできますか？</strong>
+      <span>8〜20名程度が目安ですが、少人数・大人数どちらもご相談いただけます。</span>
+    </li>
+  </ul>
 </section>
 
-<section class="section">
-  <h2>なぜボードゲームなのか</h2>
-  <div class="thought">
-    <p>激しいスポーツも難しい操作も要りません。1枚のカード、1個のサイコロ——簡単なアナログ遊びという「共通言語」が真ん中にあるだけで、年齢・立場・初対面の壁は消えます。</p>
-    <p>ボードゲームを定期的に行う高齢者は認知症発症リスクが有意に低いという研究報告もあります。楽しみながら脳を使い、笑いながら誰かとつながる——それがボードゲームの力です。</p>
-    <p>「やってみたら思ってたより全然楽しかった」という声を、ぜひ体験してください。</p>
-  </div>
-</section>
-
+<!-- 最終CTA -->
 <div class="cta-end">
   <h3>まずはお気軽にご相談ください</h3>
-  <p>初回は半額でお試しいただけます。「こんな場所でもできる？」「何人くらいから頼める？」など、どんな質問でもどうぞ。</p>
+  <p>初回は無料でお試しいただけます。「こんな場所でもできる？」「何人くらいから頼める？」など、どんな質問でもどうぞ。</p>
   <a href="tel:090-5656-3539" class="btn">📞 090-5656-3539</a>
   <a href="mailto:kotonoha.kizugawa@gmail.com" class="btn btn-outline">メールで相談</a>
   <p class="cta-note">受付時間：9:00〜20:00　／　木津川市・加茂エリア中心に対応（遠方はご相談）</p>
@@ -151,10 +319,6 @@
 <footer>
   <div class="brand">コトノハ</div>
   <p>京都府木津川市加茂町　／　代表：東 正輝</p>
-  <p style="margin-top:0.5rem;">
-    <a href="mailto:kotonoha.kizugawa@gmail.com">kotonoha.kizugawa@gmail.com</a>　／
-    <a href="https://www.instagram.com/kotonoha_kizugawa/" target="_blank">Instagram</a>
-  </p>
   <p style="margin-top:1rem; font-size:0.8rem;">© 2026 コトノハ準備会</p>
 </footer>
 
