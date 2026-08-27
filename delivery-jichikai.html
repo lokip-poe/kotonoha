@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>出張ボードゲーム交流会｜地蔵盆・こども会向け｜コトノハ</title>
+<meta name="description" content="自治会・こども会の皆様へ。地蔵盆や夏祭りの出し物に、出張ボードゲーム交流会はいかがですか？初回無料でお試しいただけます。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y83RJZX4J5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-Y83RJZX4J5');
+</script>
+<style>
+  .mini-nav {
+    padding: 1rem 1.5rem;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+    background: var(--card);
+  }
+  .mini-nav a.nav-brand {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--text);
+  }
+  .mini-nav .dot {
+    display: inline-block;
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+    margin-right: 0.5rem;
+  }
+
+  /* ファーストビュー */
+  .fv {
+    padding: 3rem 1.5rem 2.5rem;
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .fv h1 {
+    font-size: 1.9rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+  .fv h1 .accent { color: var(--accent); }
+  .fv-sub {
+    color: var(--text-soft);
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    line-height: 1.8;
+  }
+  .cta-row {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .cta-row .btn { font-size: 1rem; }
+  .cta-note-small {
+    font-size: 0.8rem;
+    color: var(--text-soft);
+    margin-top: 0.75rem;
+  }
+
+  /* 課題提起 */
+  .pain-section {
+    background: var(--card);
+    padding: 3rem 1.5rem;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+  .pain-inner { max-width: 720px; margin: 0 auto; }
+  .pain-inner h2 {
+    text-align: center;
+    font-size: 1.35rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+  .pain-list {
+    display: grid;
+    gap: 0.9rem;
+  }
+  .pain-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+    font-size: 0.98rem;
+  }
+  .pain-item .mark {
+    color: #c0391b;
+    font-weight: 900;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+  }
+
+  /* 実績バッジ */
+  .proof-inline {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    max-width: 720px;
+    margin: 2rem auto 0;
+  }
+  .proof-inline .num { font-size: 1.4rem; font-weight: 700; color: var(--accent); text-align: center; }
+  .proof-inline .label { font-size: 0.76rem; color: var(--text-soft); text-align: center; margin-top: 0.2rem; line-height: 1.5; }
+
+  .mid-cta { text-align: center; padding: 2.5rem 1.5rem; }
+
+  .phone-row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .phone-row .phone-item {
+    width: 66px;
+    height: 88px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  .phone-row img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    opacity: 0.88;
+  }
+  .together-photo {
+    max-width: 640px;
+    margin: 2rem auto 0;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 0.6rem;
+  }
+  .together-photo > div {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+  }
+  .together-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .together-caption {
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--text-soft);
+    margin-top: 0.6rem;
+  }
+  .venue-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.6rem;
+    max-width: 640px;
+    margin: 1.75rem auto 0;
+  }
+  .venue-grid > div {
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+  }
+  .venue-grid img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    display: block;
+  }
+  .venue-grid-single {
+    grid-template-columns: 1fr;
+  }
+  .venue-grid-single img {
+    aspect-ratio: auto;
+    object-fit: contain;
+  }
+</style>
+</head>
+<body>
+
+<div class="mini-nav">
+  <a class="nav-brand" href="index.html"><span class="dot"></span>コトノハ</a>
+</div>
+
+<!-- ファーストビュー -->
+<section class="fv">
+  <h1>今年の地蔵盆・こども会に、<br><span class="accent">世代を超えて</span>盛り上がる時間を。</h1>
+  <p class="fv-sub">
+    ボードゲームを持って、地蔵盆・こども会の集まりに伺います。<br>
+    ルール説明から進行まで、すべてお任せください。<br>
+    <strong>初回は無料</strong>でお試しいただけます。
+  </p>
+  <div class="cta-row">
+    <a href="tel:090-5656-3539" class="btn">📞 090-5656-3539</a>
+    <a href="mailto:kotonoha.kizugawa@gmail.com" class="btn btn-outline">メールで相談</a>
+  </div>
+  <p class="cta-note-small">受付時間：9:00〜20:00　／　木津川市・加茂エリア中心に対応</p>
+</section>
+
+<!-- 課題提起 -->
+<section class="pain-section">
+  <div class="pain-inner">
+    <div class="phone-row">
+      <div class="phone-item"><img src="irasutoya/smartphone_boy_stand.png" alt=""></div>
+      <div class="phone-item"><img src="irasutoya/smartphone_girl_stand.png" alt=""></div>
+      <div class="phone-item"><img src="irasutoya/smartphone4_woman.png" alt=""></div>
+      <div class="phone-item"><img src="irasutoya/smartphone5_ojisan.png" alt=""></div>
+      <div class="phone-item"><img src="irasutoya/smartphone6_obasan.png" alt=""></div>
+      <div class="phone-item"><img src="irasutoya/smartphone7_ojiisan.png" alt=""></div>
+      <div class="phone-item"><img src="irasutoya/smartphone8_obaasan.png" alt=""></div>
+    </div>
+    <h2>気づけば、みんなスマホを見ている。<br>そんな時間、増えていませんか？</h2>
+    <div class="pain-list">
+      <div class="pain-item"><span class="mark">・</span><span>地蔵盆やこども会に集まっても、それぞれ画面を見ている時間が増えている</span></div>
+      <div class="pain-item"><span class="mark">・</span><span>子どもはゲーム機、大人はスマホ。同じ会場にいても会話が少ない</span></div>
+      <div class="pain-item"><span class="mark">・</span><span>学年や年代が違うと、意外と話すきっかけがない</span></div>
+      <div class="pain-item"><span class="mark">・</span><span>地域の行事は本来、世代を超えて顔を合わせられる貴重な機会</span></div>
+    </div>
+    <p style="text-align:center; margin-top: 1.75rem; color: var(--text-soft); font-size: 0.95rem; line-height: 1.9;">
+      共通の「言語」がないから、同じ会場にいても世代は分断されがち。<br>
+      地蔵盆やこども会が、もっと世代を超えて盛り上がる時間になったら――。
+    </p>
+  </div>
+</section>
+
+<!-- 解決策 -->
+<section class="section">
+  <h2>1枚のカード、1個のサイコロが<br>「共通言語」になります</h2>
+  <p class="lead" style="text-align:center;">
+    ボードゲームは、年齢も立場も関係なく、同じテーブルで対等に笑い合える数少ない遊びです。<br>
+    ルールを覚えれば、おじいちゃんも子どもも、初対面同士も、みんな対等。
+  </p>
+  <div class="cards" style="margin-top: 2rem;">
+    <div class="card">
+      <span class="icon">🧠</span>
+      <h3>地域の見守り役の方には</h3>
+      <p>脳を使いながら誰かと笑い合う時間に。定期的に行う高齢者は認知症発症リスクが低いという研究報告もあります。</p>
+    </div>
+    <div class="card">
+      <span class="icon">🧒</span>
+      <h3>子どもたちには</h3>
+      <p>勝ち負け・交渉・ルールの中でのやりとりを通じて、非認知能力（交渉力・コミュニケーション力）が育ちます。</p>
+    </div>
+    <div class="card">
+      <span class="icon">🤝</span>
+      <h3>これからの時代だからこそ</h3>
+      <p>知識やAIに代替されない「人と目を見て関わる力」。AI時代に一番大事な力を、遊びながら自然に育みます。</p>
+    </div>
+  </div>
+  <div class="together-photo">
+    <div><img src="photo-0726-group.jpg" alt="7/26体験会、世代を超えて集まった参加者の様子"></div>
+    <div><img src="photo-0726-magnetchess.jpg" alt="磁気チェスで遊ぶ様子"></div>
+  </div>
+  <p class="together-caption">2026年7月26日の体験会。60代の方から5歳のお子さんまで、同じテーブルを囲みました。</p>
+</section>
+
+<!-- 実績・根拠 -->
+<section class="section" style="background: var(--card); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+  <h2>実施実績</h2>
+  <div class="voice-list" style="margin-top: 1rem;">
+    <div class="voice-box" style="background: white; border-left: 4px solid var(--accent); border-radius: 0 10px 10px 0; padding: 0.9rem 1.1rem; margin-bottom: 0.8rem; font-size: 0.95rem; box-shadow: var(--shadow);">
+      「子供たちがとても喜んでいました。年齢関係なく交流ができると思いました。」
+    </div>
+    <div class="voice-box" style="background: white; border-left: 4px solid var(--accent); border-radius: 0 10px 10px 0; padding: 0.9rem 1.1rem; font-size: 0.95rem; box-shadow: var(--shadow);">
+      「サロンの中で遊ぶと喜ばれる」
+    </div>
+  </div>
+  <div class="proof-inline">
+    <div><div class="num">9名</div><div class="label">7/26体験会<br>参加</div></div>
+    <div><div class="num">4.3<span style="font-size:0.9rem;">/5</span></div><div class="label">満足度<br>平均評価</div></div>
+    <div><div class="num">3件</div><div class="label">体験会・きずな食堂・<br>涼み処 実施</div></div>
+  </div>
+</section>
+
+<!-- あなたの地蔵盆・こども会も、こんな時間に -->
+<section class="section">
+  <h2>あなたの地蔵盆・こども会も、こんな時間になります</h2>
+  <p class="lead" style="text-align:center;">
+    「夏休みボードゲーム涼み処」での実際の様子です。<br>
+    お近くの自治会・こども会の集まりでも、同じような時間をお届けします。
+  </p>
+  <div class="venue-grid venue-grid-single">
+    <div><img src="photo-0816-room.jpg" alt="夏休みボードゲーム涼み処の会場の様子"></div>
+  </div>
+</section>
+
+<div class="mid-cta">
+  <a href="tel:090-5656-3539" class="btn">📞 まずは電話で相談してみる</a>
+</div>
+
+<!-- 料金 -->
+<section class="section">
+  <h2>料金</h2>
+  <p>初回は無料でお試しいただけます（1自治会・こども会1回限り）。「続けたい」「今年もお願いしたい」と思っていただけたら、2回目からは下記料金でご案内します。</p>
+  <div class="plans">
+    <div class="plan featured">
+      <div class="plan-discount">初回限定</div>
+      <div class="plan-name">初回体験</div>
+      <div class="plan-price">無　料<span class="unit"></span></div>
+      <div class="plan-desc">1自治会・こども会1回限り。交通費は実費をご負担ください。</div>
+    </div>
+    <div class="plan">
+      <div class="plan-name">こども会・子供会の集まり</div>
+      <div class="plan-price">5,000<span class="unit">円〜 / 2時間</span></div>
+      <div class="plan-desc">＋交通費実費。継続利用の場合はご相談ください。<br><strong style="color: var(--accent);">10名でご参加なら、お一人あたり500円</strong></div>
+    </div>
+    <div class="plan">
+      <div class="plan-name">地蔵盆・夏祭りなどの行事</div>
+      <div class="plan-price">10,000<span class="unit">円〜 / 2時間</span></div>
+      <div class="plan-desc">＋交通費実費。出し物の一つとして予算計上いただけます。<br><strong style="color: var(--accent);">10名でご参加なら、お一人あたり1,000円</strong></div>
+    </div>
+  </div>
+  <p style="text-align:center; margin-top: 1.25rem; color: var(--text-soft); font-size: 0.88rem;">
+    ※人数が多いほど、お一人あたりの負担はさらに小さくなります
+  </p>
+</section>
+
+<!-- 不安解消 -->
+<section class="section" style="background: var(--card);">
+  <h2>よくあるご不安について</h2>
+  <ul class="rule-list">
+    <li>
+      <strong>準備は何が必要ですか？</strong>
+      <span>会場（公民館・集会所など）とテーブル・椅子だけご用意ください。ゲーム・進行はすべてこちらで持参・担当します。</span>
+    </li>
+    <li>
+      <strong>ボードゲームをやったことがない方ばかりですが大丈夫ですか？</strong>
+      <span>むしろそういった場所の方が多いです。ルールが単純なゲームから始めるので、初めての方も数分で参加いただけます。</span>
+    </li>
+    <li>
+      <strong>地蔵盆のように、出入り自由な形式でも対応できますか？</strong>
+      <span>はい。時間を区切った交流会形式はもちろん、常設の出し物ブースとして出入り自由な形式でもご相談いただけます。</span>
+    </li>
+    <li>
+      <strong>人数は何人からお願いできますか？</strong>
+      <span>8〜20名程度が目安ですが、少人数・大人数どちらもご相談いただけます。</span>
+    </li>
+  </ul>
+</section>
+
+<!-- 最終CTA -->
+<div class="cta-end">
+  <h3>まずはお気軽にご相談ください</h3>
+  <p>初回は無料でお試しいただけます。「地蔵盆の出し物として頼める？」「こども会の何人くらいから頼める？」など、どんな質問でもどうぞ。</p>
+  <a href="tel:090-5656-3539" class="btn">📞 090-5656-3539</a>
+  <a href="mailto:kotonoha.kizugawa@gmail.com" class="btn btn-outline">メールで相談</a>
+  <p class="cta-note">受付時間：9:00〜20:00　／　木津川市・加茂エリア中心に対応（遠方はご相談）</p>
+</div>
+
+<footer>
+  <div class="brand">コトノハ</div>
+  <p>京都府木津川市加茂町　／　代表：東 正輝</p>
+  <p style="margin-top:1rem; font-size:0.8rem;">© 2026 コトノハ準備会</p>
+</footer>
+
+</body>
+</html>
