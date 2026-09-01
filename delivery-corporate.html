@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>出張ボードゲーム交流会｜社内研修・懇親会・企業間交流向け｜コトノハ</title>
+<meta name="description" content="社内研修・社内懇親会・協力企業同士の懇親会に。出張ボードゲーム交流会が、初対面同士でも打ち解けられる時間をお届けします。初回無料でお試しいただけます。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y83RJZX4J5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-Y83RJZX4J5');
+</script>
+<style>
+  .mini-nav {
+    padding: 1rem 1.5rem;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+    background: var(--card);
+  }
+  .mini-nav a.nav-brand {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--text);
+  }
+  .mini-nav .dot {
+    display: inline-block;
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+    margin-right: 0.5rem;
+  }
+
+  /* ファーストビュー */
+  .fv {
+    padding: 3rem 1.5rem 2.5rem;
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .fv h1 {
+    font-size: 1.9rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+  .fv h1 .accent { color: var(--accent); }
+  .fv-sub {
+    color: var(--text-soft);
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    line-height: 1.8;
+  }
+  .cta-row {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .cta-row .btn { font-size: 1rem; }
+  .cta-note-small {
+    font-size: 0.8rem;
+    color: var(--text-soft);
+    margin-top: 0.75rem;
+  }
+
+  /* 対象タグ */
+  .target-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+  }
+  .target-tags span {
+    background: var(--card);
+    border: 1px solid var(--border);
+    color: var(--text-soft);
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 0.3rem 0.9rem;
+    border-radius: 9999px;
+  }
+
+  /* 課題提起 */
+  .pain-section {
+    background: var(--card);
+    padding: 3rem 1.5rem;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+  .pain-inner { max-width: 720px; margin: 0 auto; }
+  .pain-inner h2 {
+    text-align: center;
+    font-size: 1.35rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+  .pain-list {
+    display: grid;
+    gap: 0.9rem;
+  }
+  .pain-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+    font-size: 0.98rem;
+  }
+  .pain-item .mark {
+    color: #c0391b;
+    font-weight: 900;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+  }
+
+  /* 実績バッジ */
+  .proof-inline {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    max-width: 720px;
+    margin: 2rem auto 0;
+  }
+  .proof-inline .num { font-size: 1.4rem; font-weight: 700; color: var(--accent); text-align: center; }
+  .proof-inline .label { font-size: 0.76rem; color: var(--text-soft); text-align: center; margin-top: 0.2rem; line-height: 1.5; }
+
+  .mid-cta { text-align: center; padding: 2.5rem 1.5rem; }
+
+  .together-photo {
+    max-width: 640px;
+    margin: 2rem auto 0;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 0.6rem;
+  }
+  .together-photo > div {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+  }
+  .together-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .together-caption {
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--text-soft);
+    margin-top: 0.6rem;
+  }
+  .venue-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.6rem;
+    max-width: 640px;
+    margin: 1.75rem auto 0;
+  }
+  .venue-grid > div {
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+  }
+  .venue-grid img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    display: block;
+  }
+  .venue-grid-single {
+    grid-template-columns: 1fr;
+  }
+  .venue-grid-single img {
+    aspect-ratio: auto;
+    object-fit: contain;
+  }
+</style>
+</head>
+<body>
+
+<div class="mini-nav">
+  <a class="nav-brand" href="index.html"><span class="dot"></span>コトノハ</a>
+</div>
+
+<!-- ファーストビュー -->
+<section class="fv">
+  <h1>名刺交換で終わる懇親会に、<br><span class="accent">会話のきっかけ</span>を。</h1>
+  <p class="fv-sub">
+    ボードゲームを持って、社内研修・社内懇親会・協力企業同士の懇親会に伺います。<br>
+    ルール説明から進行まで、すべてお任せください。<br>
+    <strong>初回は無料</strong>でお試しいただけます。
+  </p>
+  <div class="cta-row">
+    <a href="tel:090-5656-3539" class="btn">📞 090-5656-3539</a>
+    <a href="mailto:kotonoha.kizugawa@gmail.com" class="btn btn-outline">メールで相談</a>
+  </div>
+  <p class="cta-note-small">受付時間：9:00〜20:00　／　木津川市・加茂エリア中心に対応</p>
+  <div class="target-tags">
+    <span>社内研修・新人研修</span>
+    <span>社内懇親会</span>
+    <span>協力企業同士の懇親会</span>
+  </div>
+</section>
+
+<!-- 課題提起 -->
+<section class="pain-section">
+  <div class="pain-inner">
+    <h2>気づけば、いつものメンバーとしか<br>話していない。そんな懇親会、増えていませんか？</h2>
+    <div class="pain-list">
+      <div class="pain-item"><span class="mark">・</span><span>立食パーティーで、結局いつも近くにいる人としか話さない</span></div>
+      <div class="pain-item"><span class="mark">・</span><span>新人研修のアイスブレイク、毎回何をすればいいか悩む</span></div>
+      <div class="pain-item"><span class="mark">・</span><span>協力会社との顔合わせが、名刺交換だけで終わってしまう</span></div>
+      <div class="pain-item"><span class="mark">・</span><span>部署をまたいだ交流は、なかなかきっかけがない</span></div>
+    </div>
+    <p style="text-align:center; margin-top: 1.75rem; color: var(--text-soft); font-size: 0.95rem; line-height: 1.9;">
+      共通の「話題」がないと、同じ場にいても会話は生まれにくい。<br>
+      研修や懇親会が、もっと自然に打ち解けられる時間になったら――。
+    </p>
+  </div>
+</section>
+
+<!-- 解決策 -->
+<section class="section">
+  <h2>1枚のカード、1個のサイコロが<br>「共通言語」になります</h2>
+  <p class="lead" style="text-align:center;">
+    ボードゲームは、役職も部署も社歴も関係なく、同じテーブルで対等に盛り上がれる数少ない遊びです。<br>
+    ルールを覚えれば、新人もベテランも、初対面同士も、みんな対等。
+  </p>
+  <div class="cards" style="margin-top: 2rem;">
+    <div class="card">
+      <span class="icon">🧩</span>
+      <h3>社内研修には</h3>
+      <p>アイスブレイク・チームビルディングとして。初対面同士でも数分でチームの空気がほぐれます。</p>
+    </div>
+    <div class="card">
+      <span class="icon">🍻</span>
+      <h3>社内懇親会には</h3>
+      <p>立食・乾杯だけで終わらない、部署をまたいだ会話のきっかけに。</p>
+    </div>
+    <div class="card">
+      <span class="icon">🤝</span>
+      <h3>協力企業との懇親会には</h3>
+      <p>名刺交換のその先、顔の見える関係づくりの時間として。</p>
+    </div>
+  </div>
+  <div class="together-photo">
+    <div><img src="photo-0726-group.jpg" alt="体験会、初対面同士が集まった参加者の様子"></div>
+    <div><img src="photo-0726-magnetchess.jpg" alt="磁気チェスで遊ぶ様子"></div>
+  </div>
+  <p class="together-caption">2026年7月26日の体験会の様子。初対面同士でも、ゲームを通じてすぐに会話が生まれました。</p>
+</section>
+
+<!-- 実績・根拠 -->
+<section class="section" style="background: var(--card); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+  <h2>実施実績</h2>
+  <div class="voice-list" style="margin-top: 1rem;">
+    <div class="voice-box" style="background: white; border-left: 4px solid var(--accent); border-radius: 0 10px 10px 0; padding: 0.9rem 1.1rem; margin-bottom: 0.8rem; font-size: 0.95rem; box-shadow: var(--shadow);">
+      「子供たちがとても喜んでいました。年齢関係なく交流ができると思いました。」
+    </div>
+    <div class="voice-box" style="background: white; border-left: 4px solid var(--accent); border-radius: 0 10px 10px 0; padding: 0.9rem 1.1rem; font-size: 0.95rem; box-shadow: var(--shadow);">
+      「サロンの中で遊ぶと喜ばれる」
+    </div>
+  </div>
+  <div class="proof-inline">
+    <div><div class="num">9名</div><div class="label">7/26体験会<br>参加</div></div>
+    <div><div class="num">4.3<span style="font-size:0.9rem;">/5</span></div><div class="label">満足度<br>平均評価</div></div>
+    <div><div class="num">3件</div><div class="label">体験会・きずな食堂・<br>涼み処 実施</div></div>
+  </div>
+</section>
+
+<!-- あなたの研修・懇親会も、こんな時間に -->
+<section class="section">
+  <h2>あなたの研修・懇親会も、こんな時間になります</h2>
+  <p class="lead" style="text-align:center;">
+    「夏休みボードゲーム涼み処」での実際の様子です。<br>
+    会議室や宴会場でも、同じような時間をお届けします。
+  </p>
+  <div class="venue-grid venue-grid-single">
+    <div><img src="photo-0816-room.jpg" alt="会場の様子"></div>
+  </div>
+</section>
+
+<div class="mid-cta">
+  <a href="tel:090-5656-3539" class="btn">📞 まずは電話で相談してみる</a>
+</div>
+
+<!-- 料金 -->
+<section class="section">
+  <h2>料金</h2>
+  <p>初回は無料でお試しいただけます（1社1回限り）。「続けて依頼したい」と思っていただけたら、2回目からの料金についてご案内します。</p>
+  <div class="plans">
+    <div class="plan featured">
+      <div class="plan-discount">初回限定</div>
+      <div class="plan-name">初回体験</div>
+      <div class="plan-price">無　料<span class="unit"></span></div>
+      <div class="plan-desc">1社1回限り。交通費は実費をご負担ください。</div>
+    </div>
+    <div class="plan">
+      <div class="plan-name">2回目以降</div>
+      <div class="plan-price">お問い合わせ<span class="unit">ください</span></div>
+      <div class="plan-desc">研修・懇親会の企画予算に応じてご案内します。まずはお気軽にご相談ください。</div>
+    </div>
+  </div>
+</section>
+
+<!-- 不安解消 -->
+<section class="section" style="background: var(--card);">
+  <h2>よくあるご質問</h2>
+  <ul class="rule-list">
+    <li>
+      <strong>準備は何が必要ですか？</strong>
+      <span>会議室・宴会場などのお部屋とテーブル・椅子だけご用意ください。ゲーム・進行はすべてこちらで持参・担当します。</span>
+    </li>
+    <li>
+      <strong>ボードゲームをやったことがない社員ばかりですが大丈夫ですか？</strong>
+      <span>むしろそういった職場の方が多いです。ルールが単純なゲームから始めるので、初めての方も数分で参加いただけます。</span>
+    </li>
+    <li>
+      <strong>懇親会の乾杯後、余興として組み込めますか？</strong>
+      <span>はい。乾杯後の余興枠や、二次会代わりの時間としてもご相談いただけます。</span>
+    </li>
+    <li>
+      <strong>人数は何人からお願いできますか？</strong>
+      <span>8〜20名程度が目安ですが、少人数・大人数どちらもご相談いただけます。</span>
+    </li>
+  </ul>
+</section>
+
+<!-- 最終CTA -->
+<div class="cta-end">
+  <h3>まずはお気軽にご相談ください</h3>
+  <p>初回は無料でお試しいただけます。「新人研修のアイスブレイクに使える？」「懇親会は何人くらいから頼める？」など、どんな質問でもどうぞ。</p>
+  <a href="tel:090-5656-3539" class="btn">📞 090-5656-3539</a>
+  <a href="mailto:kotonoha.kizugawa@gmail.com" class="btn btn-outline">メールで相談</a>
+  <p class="cta-note">受付時間：9:00〜20:00　／　木津川市・加茂エリア中心に対応（遠方はご相談）</p>
+</div>
+
+<footer>
+  <div class="brand">コトノハ</div>
+  <p>京都府木津川市加茂町　／　代表：東 正輝</p>
+  <p style="margin-top:1rem; font-size:0.8rem;">© 2026 コトノハ</p>
+</footer>
+
+</body>
+</html>
