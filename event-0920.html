@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>9/20 ボードゲーム交流会｜コトノハ</title>
-<meta name="description" content="2026年9月20日（日）13:00〜17:00、新町区自治会集会所にてボードゲーム交流会を開催します。予約不要・出入り自由、高校生以下無料。">
-<meta property="og:title" content="9/20 ボードゲーム交流会｜コトノハ">
-<meta property="og:description" content="子どもからシニアまで、世代を超えて盛り上がる時間を。予約不要・出入り自由です。">
-<meta property="og:image" content="https://lokip-poe.github.io/kotonoha/photo-0816-room.jpg">
+<title>9/20 開催レポート｜コトノハ</title>
+<meta name="description" content="2026年9月20日、コトノハ ボードゲーム交流会を新町区自治会集会所で開催しました。当日の様子をレポートします。">
+<meta property="og:title" content="9/20 開催レポート｜コトノハ">
+<meta property="og:description" content="新町区自治会集会所でのボードゲーム交流会、当日の様子をお届けします。">
+<meta property="og:image" content="https://lokip-poe.github.io/kotonoha/photo-0920-room.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
@@ -65,39 +65,12 @@
     box-shadow: var(--shadow);
   }
   .hero-photo img { width: 100%; display: block; }
-  .fee-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.85rem;
-    margin-top: 1.25rem;
-  }
-  .fee-card {
-    background: var(--card);
-    border: 2px solid var(--accent);
-    border-radius: 12px;
-    padding: 1rem;
+  .photo-caption {
+    font-size: 0.8rem;
+    color: var(--text-soft);
     text-align: center;
-    box-shadow: var(--shadow);
+    margin-top: 0.5rem;
   }
-  .fee-card .who { font-size: 0.85rem; font-weight: 700; color: var(--text-soft); margin-bottom: 0.2rem; }
-  .fee-card .price { font-size: 1.6rem; font-weight: 700; color: var(--accent); line-height: 1; }
-  .fee-card .price.free { color: #2a7a2a; }
-  .fee-card .note { font-size: 0.75rem; color: var(--text-soft); margin-top: 0.3rem; }
-  .point-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.75rem;
-    margin-top: 1.25rem;
-  }
-  .point {
-    background: var(--card);
-    border-left: 4px solid var(--accent);
-    padding: 0.75rem 1rem;
-    border-radius: 0 10px 10px 0;
-    font-size: 0.85rem;
-    box-shadow: var(--shadow);
-  }
-  .point strong { color: var(--text); display: block; font-size: 0.9rem; margin-bottom: 0.2rem; }
   .game-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -130,17 +103,28 @@
     line-height: 1.5;
     margin: 0;
   }
-  .also-played {
-    margin-top: 1rem;
-    font-size: 0.88rem;
-    color: var(--text-soft);
+  .voice-list { margin-top: 1rem; }
+  .voice-box {
     background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 10px;
+    border-left: 4px solid var(--accent);
+    border-radius: 0 10px 10px 0;
     padding: 0.85rem 1.1rem;
-    line-height: 1.8;
+    margin-bottom: 0.7rem;
+    font-size: 0.92rem;
+    line-height: 1.7;
+    box-shadow: var(--shadow);
   }
-  .also-played strong { color: var(--accent); }
+  .flyer-link {
+    display: inline-block;
+    border: 2px solid var(--accent);
+    color: var(--accent);
+    padding: 0.7rem 1.75rem;
+    border-radius: 9999px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.2s;
+  }
+  .flyer-link:hover { background: var(--accent); color: white; }
 </style>
 </head>
 <body>
@@ -154,20 +138,20 @@
       <a href="index.html">ホーム</a>
       <a href="details.html">くわしく</a>
       <a href="delivery.html">出張サービス</a>
-      <a href="info.html">実施レポート</a>
+      <a href="info.html" style="color: var(--accent); font-weight: 700;">実施レポート</a>
       <a href="links.html">リンク集</a>
     </div>
   </div>
 </nav>
 
 <div class="page-header">
-  <h1>ボードゲーム交流会、<br>9月もやります！</h1>
-  <p>子どもからシニアまで、世代を超えて盛り上がる時間を。予約不要・出入り自由です。</p>
+  <h1>ボードゲーム交流会 開催レポート</h1>
+  <p>2026年9月20日、新町区自治会集会所でボードゲーム交流会を開催しました。</p>
 </div>
 
 <section class="section" style="padding-top: 0;">
   <div class="hero-photo">
-    <img src="photo-0816-room.jpg" alt="ボードゲーム交流会の会場">
+    <img src="photo-0920-room.png" alt="ボードゲーム交流会の会場の様子">
   </div>
 </section>
 
@@ -175,107 +159,63 @@
   <div class="event-info">
     <div class="event-info-row">
       <span class="event-label">日時</span>
-      <span class="event-value">
-        <strong>2026年9月20日（日）13:00〜17:00</strong>
-        <span class="note">出入り自由・途中参加OK</span>
-      </span>
+      <span class="event-value"><strong>2026年9月20日（日）13:00〜17:00</strong></span>
     </div>
     <div class="event-info-row">
       <span class="event-label">場所</span>
       <span class="event-value">
         <strong>新町区 自治会集会所</strong>
-        <span class="note">〒619-1152 京都府木津川市加茂町里須原16−1</span>
+        <span class="note">京都府木津川市加茂町里須原16−1</span>
       </span>
     </div>
     <div class="event-info-row">
-      <span class="event-label">定員</span>
-      <span class="event-value">15〜20名程度</span>
+      <span class="event-label">参加</span>
+      <span class="event-value"><strong>合計9名</strong></span>
     </div>
     <div class="event-info-row">
       <span class="event-label">主催</span>
-      <span class="event-value">コトノハ（東 正輝　090-5656-3539）</span>
+      <span class="event-value">コトノハ（東 正輝）</span>
     </div>
-  </div>
-
-  <div class="hero-photo" style="margin-top: 1.25rem;">
-    <img src="photo-venue-exterior.png" alt="新町区自治会集会所 外観">
-  </div>
-  <p class="photo-caption" style="text-align:center; font-size:0.82rem; color:var(--text-soft); margin-top:0.5rem;">
-    会場の外観です。入り口に「新町区 自治会集会所」の看板があります。<br>
-    <a href="https://maps.app.goo.gl/5iqgsJDgkhu3CNzf8" target="_blank" rel="noopener">Googleマップで開く →</a>
-  </p>
-
-  <div class="hero-photo" style="margin-top: 1.25rem;">
-    <img src="map-aerial-venue.png" alt="会場周辺の地図（会場・コインパーキング・ローソン加茂駅前店・JR加茂駅）">
-  </div>
-  <div class="point-grid" style="margin-top: 1rem;">
-    <div class="point"><strong>🚉 電車でお越しの方</strong>JR加茂駅から会場まで徒歩約3分です。</div>
-    <div class="point"><strong>🚗 お車でお越しの方</strong>集会所に駐車場はございません。「チケパ 加茂駅前第2駐車場」（会場から徒歩2〜3分）などのコインパーキングをご利用ください。</div>
-  </div>
-
-  <div class="fee-grid">
-    <div class="fee-card">
-      <div class="who">高校生以下</div>
-      <div class="price free">無料</div>
-      <div class="note">水・お茶も無料</div>
-    </div>
-    <div class="fee-card">
-      <div class="who">大人</div>
-      <div class="price">500円</div>
-      <div class="note">1回あたり・お茶込み</div>
-    </div>
-  </div>
-
-  <div class="point-grid">
-    <div class="point"><strong>🎲 ルール説明あり</strong>ボードゲームが初めてでも大丈夫。スタッフが丁寧に教えます。</div>
-    <div class="point"><strong>🧓🧒 多世代交流</strong>シニアの方から小さなお子さんまで、一緒に楽しめます。</div>
-    <div class="point"><strong>👶 送迎・見守りOK</strong>保護者の方の付き添い・様子見も大歓迎です。</div>
-    <div class="point"><strong>🙆 予約不要・出入り自由</strong>当日ふらっと来ていただいてOKです。</div>
   </div>
 </section>
 
 <section class="section" style="padding-top: 0;">
-  <h2>当日、こんなゲームで遊べます</h2>
-  <p style="color: var(--text-soft); font-size: 0.95rem;">世代を超えて楽しめるゲームを持っていきます。</p>
+  <h2>遊んだゲーム</h2>
+  <p style="color: var(--text-soft); font-size: 0.95rem;">予約不要・出入り自由の形式で、それぞれのペースで楽しんでいただきました。</p>
   <div class="game-grid">
     <div class="game-card">
-      <img src="game-nanjamonja.jpg" alt="ナンジャモンジャで遊ぶ様子">
+      <img src="photo-0920-dobble.png" alt="ドブルで対戦する様子">
       <div class="game-card-body">
-        <h3>ナンジャモンジャ</h3>
-        <p>変な生き物に名前をつける、記憶力ゲーム。</p>
+        <h3>ドブル</h3>
+        <p>「見つけた！」の声があちこちで。瞬発力の勝負です。</p>
       </div>
     </div>
     <div class="game-card">
-      <img src="game-obakecatch.jpg" alt="おばけキャッチで遊ぶ様子">
+      <img src="photo-0920-cards.png" alt="考察・推理系のカードゲームで遊ぶ様子">
       <div class="game-card-body">
-        <h3>おばけキャッチ</h3>
-        <p>色と形を見比べて、すばやく取るゲーム。</p>
+        <h3>考察・推理系のカードゲーム</h3>
+        <p>初めて見るゲームにも、気づけばみんな夢中に。</p>
       </div>
     </div>
-    <div class="game-card">
-      <img src="game-halligalli.jpg" alt="ハリガリで遊ぶ様子">
-      <div class="game-card-body">
-        <h3>ハリガリ</h3>
-        <p>果物の数がそろった瞬間、ベルを鳴らせ。</p>
-      </div>
-    </div>
-    <div class="game-card">
-      <img src="game-sanrentan.jpg" alt="サンレンタンで遊ぶ様子">
-      <div class="game-card-body">
-        <h3>サンレンタン</h3>
-        <p>相手の価値観を、1位から3位まで当てるゲーム。</p>
-      </div>
-    </div>
-  </div>
-  <div class="also-played">
-    <strong>他にも多数：</strong>当日はこの他にもたくさんのゲームをご用意します。<a href="game-search.html">ゲームを探す →</a>
   </div>
 </section>
 
+<section class="section" style="padding-top: 0;">
+  <h2>当日の様子</h2>
+  <div class="hero-photo">
+    <img src="photo-0920-room2.png" alt="会場全体の様子">
+  </div>
+  <p class="photo-caption">会場のあちこちで笑い声が聞こえる時間になりました。</p>
+</section>
+
 <div class="cta-end">
-  <h3>これまでの活動</h3>
-  <p>7月の体験会、8月の夏休み涼み処と続けてきました。</p>
-  <a href="info.html" class="btn btn-outline">実施レポートを見る</a>
+  <h3>次回のご案内</h3>
+  <p>毎月第3日曜日に開催しています。次回は10月18日（日）です。</p>
+  <a href="event-1018.html" class="btn">10/18の詳細を見る</a>
+  <div style="margin-top: 1.5rem; border-top: 1px solid var(--border); padding-top: 1.25rem;">
+    <p style="margin-bottom: 0.75rem; color: var(--text-soft); font-size: 0.9rem;">他の活動レポートはこちらから</p>
+    <a href="info.html" class="flyer-link">実施レポートを見る</a>
+  </div>
 </div>
 
 <footer>
