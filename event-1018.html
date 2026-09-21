@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>10/18 ボードゲーム交流会｜コトノハ</title>
+<meta name="description" content="2026年10月18日（日）13:00〜17:00、新町区自治会集会所にてボードゲーム交流会を開催します。予約不要・出入り自由、高校生以下無料。">
+<meta property="og:title" content="10/18 ボードゲーム交流会｜コトノハ">
+<meta property="og:description" content="子どもからシニアまで、世代を超えて盛り上がる時間を。予約不要・出入り自由です。">
+<meta property="og:image" content="https://lokip-poe.github.io/kotonoha/photo-0920-room.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y83RJZX4J5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-Y83RJZX4J5');
+</script>
+<style>
+  .event-info {
+    background: var(--card);
+    border: 2px solid var(--accent);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+  .event-info-row {
+    display: grid;
+    grid-template-columns: 72px 1fr;
+    border-bottom: 1px solid var(--border);
+    align-items: stretch;
+  }
+  .event-info-row:last-child { border-bottom: none; }
+  .event-label {
+    background: var(--text);
+    color: white;
+    font-size: 0.82rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.08em;
+    padding: 1rem 0;
+  }
+  .event-value {
+    padding: 0.85rem 1.1rem;
+    font-size: 0.97rem;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .event-value .note {
+    font-size: 0.82rem;
+    color: var(--text-soft);
+    margin-top: 0.1rem;
+  }
+  .hero-photo {
+    width: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+  .hero-photo img { width: 100%; display: block; }
+  .fee-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.85rem;
+    margin-top: 1.25rem;
+  }
+  .fee-card {
+    background: var(--card);
+    border: 2px solid var(--accent);
+    border-radius: 12px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: var(--shadow);
+  }
+  .fee-card .who { font-size: 0.85rem; font-weight: 700; color: var(--text-soft); margin-bottom: 0.2rem; }
+  .fee-card .price { font-size: 1.6rem; font-weight: 700; color: var(--accent); line-height: 1; }
+  .fee-card .price.free { color: #2a7a2a; }
+  .fee-card .note { font-size: 0.75rem; color: var(--text-soft); margin-top: 0.3rem; }
+  .point-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    margin-top: 1.25rem;
+  }
+  .point {
+    background: var(--card);
+    border-left: 4px solid var(--accent);
+    padding: 0.75rem 1rem;
+    border-radius: 0 10px 10px 0;
+    font-size: 0.85rem;
+    box-shadow: var(--shadow);
+  }
+  .point strong { color: var(--text); display: block; font-size: 0.9rem; margin-bottom: 0.2rem; }
+  .game-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    margin-top: 1.25rem;
+  }
+  .game-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+  .game-card img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    display: block;
+  }
+  .game-card-body { padding: 0.6rem 0.75rem 0.75rem; }
+  .game-card-body h3 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 0.2rem;
+  }
+  .game-card-body p {
+    font-size: 0.82rem;
+    color: var(--text-soft);
+    line-height: 1.5;
+    margin: 0;
+  }
+  .also-played {
+    margin-top: 1rem;
+    font-size: 0.88rem;
+    color: var(--text-soft);
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 0.85rem 1.1rem;
+    line-height: 1.8;
+  }
+  .also-played strong { color: var(--accent); }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-brand"><span class="dot"></span>コトノハ</div>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox">
+    <label for="nav-toggle" class="nav-toggle-btn">☰</label>
+    <div class="nav-links">
+      <a href="index.html">ホーム</a>
+      <a href="details.html">くわしく</a>
+      <a href="delivery.html">出張サービス</a>
+      <a href="info.html">実施レポート</a>
+      <a href="links.html">リンク集</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-header">
+  <h1>ボードゲーム交流会、<br>10月もやります！</h1>
+  <p>子どもからシニアまで、世代を超えて盛り上がる時間を。予約不要・出入り自由です。</p>
+</div>
+
+<section class="section" style="padding-top: 0;">
+  <div class="hero-photo">
+    <img src="photo-0920-room.png" alt="ボードゲーム交流会の会場">
+  </div>
+</section>
+
+<section class="section" style="padding-top: 0;">
+  <div class="event-info">
+    <div class="event-info-row">
+      <span class="event-label">日時</span>
+      <span class="event-value">
+        <strong>2026年10月18日（日）13:00〜17:00</strong>
+        <span class="note">出入り自由・途中参加OK</span>
+      </span>
+    </div>
+    <div class="event-info-row">
+      <span class="event-label">場所</span>
+      <span class="event-value">
+        <strong>新町区 自治会集会所</strong>
+        <span class="note">〒619-1152 京都府木津川市加茂町里須原16−1</span>
+      </span>
+    </div>
+    <div class="event-info-row">
+      <span class="event-label">定員</span>
+      <span class="event-value">15〜20名程度</span>
+    </div>
+    <div class="event-info-row">
+      <span class="event-label">主催</span>
+      <span class="event-value">コトノハ（東 正輝　090-5656-3539）</span>
+    </div>
+  </div>
+
+  <div class="hero-photo" style="margin-top: 1.25rem;">
+    <img src="photo-venue-exterior.png" alt="新町区自治会集会所 外観">
+  </div>
+  <p class="photo-caption" style="text-align:center; font-size:0.82rem; color:var(--text-soft); margin-top:0.5rem;">
+    会場の外観です。入り口に「新町区 自治会集会所」の看板があります。<br>
+    <a href="https://maps.app.goo.gl/5iqgsJDgkhu3CNzf8" target="_blank" rel="noopener">Googleマップで開く →</a>
+  </p>
+
+  <div class="hero-photo" style="margin-top: 1.25rem;">
+    <img src="map-aerial-venue.png" alt="会場周辺の地図（会場・コインパーキング・ローソン加茂駅前店・JR加茂駅）">
+  </div>
+  <div class="point-grid" style="margin-top: 1rem;">
+    <div class="point"><strong>🚉 電車でお越しの方</strong>JR加茂駅から会場まで徒歩約3分です。</div>
+    <div class="point"><strong>🚗 お車でお越しの方</strong>集会所に駐車場はございません。「チケパ 加茂駅前第2駐車場」（会場から徒歩2〜3分）などのコインパーキングをご利用ください。</div>
+  </div>
+
+  <div class="fee-grid">
+    <div class="fee-card">
+      <div class="who">高校生以下</div>
+      <div class="price free">無料</div>
+      <div class="note">水・お茶も無料</div>
+    </div>
+    <div class="fee-card">
+      <div class="who">大人</div>
+      <div class="price">500円</div>
+      <div class="note">1回あたり・お茶込み</div>
+    </div>
+  </div>
+
+  <div class="point-grid">
+    <div class="point"><strong>🎲 ルール説明あり</strong>ボードゲームが初めてでも大丈夫。スタッフが丁寧に教えます。</div>
+    <div class="point"><strong>🧓🧒 多世代交流</strong>シニアの方から小さなお子さんまで、一緒に楽しめます。</div>
+    <div class="point"><strong>👶 送迎・見守りOK</strong>保護者の方の付き添い・様子見も大歓迎です。</div>
+    <div class="point"><strong>🙆 予約不要・出入り自由</strong>当日ふらっと来ていただいてOKです。</div>
+  </div>
+</section>
+
+<section class="section" style="padding-top: 0;">
+  <h2>当日、こんなゲームで遊べます</h2>
+  <p style="color: var(--text-soft); font-size: 0.95rem;">世代を超えて楽しめるゲームを持っていきます。</p>
+  <div class="game-grid">
+    <div class="game-card">
+      <img src="game-nanjamonja.jpg" alt="ナンジャモンジャで遊ぶ様子">
+      <div class="game-card-body">
+        <h3>ナンジャモンジャ</h3>
+        <p>変な生き物に名前をつける、記憶力ゲーム。</p>
+      </div>
+    </div>
+    <div class="game-card">
+      <img src="game-obakecatch.jpg" alt="おばけキャッチで遊ぶ様子">
+      <div class="game-card-body">
+        <h3>おばけキャッチ</h3>
+        <p>色と形を見比べて、すばやく取るゲーム。</p>
+      </div>
+    </div>
+    <div class="game-card">
+      <img src="game-halligalli.jpg" alt="ハリガリで遊ぶ様子">
+      <div class="game-card-body">
+        <h3>ハリガリ</h3>
+        <p>果物の数がそろった瞬間、ベルを鳴らせ。</p>
+      </div>
+    </div>
+    <div class="game-card">
+      <img src="game-sanrentan.jpg" alt="サンレンタンで遊ぶ様子">
+      <div class="game-card-body">
+        <h3>サンレンタン</h3>
+        <p>相手の価値観を、1位から3位まで当てるゲーム。</p>
+      </div>
+    </div>
+  </div>
+  <div class="also-played">
+    <strong>他にも多数：</strong>当日はこの他にもたくさんのゲームをご用意します。<a href="game-search.html">ゲームを探す →</a>
+  </div>
+</section>
+
+<div class="cta-end">
+  <h3>これまでの活動</h3>
+  <p>7月の体験会、夏休みの涼み処、9月からは新町区自治会集会所での定期開催が始まりました。</p>
+  <a href="event-0920.html" class="btn btn-outline">9/20の開催レポートを見る</a>
+</div>
+
+<footer>
+  <div class="brand">コトノハ</div>
+  <div>京都府 木津川市</div>
+  <div style="margin-top: 0.5rem;">kotonoha.kizugawa@gmail.com</div>
+  <div style="margin-top: 0.25rem;">Instagram: @kotonoha_kizugawa</div>
+  <div style="margin-top: 0.5rem;">© 2026 コトノハ</div>
+</footer>
+
+</body>
+</html>
