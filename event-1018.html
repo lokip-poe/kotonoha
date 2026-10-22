@@ -103,6 +103,25 @@
     line-height: 1.5;
     margin: 0;
   }
+  .video-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    margin-top: 1.25rem;
+  }
+  .video-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+  .video-card video {
+    width: 100%;
+    aspect-ratio: 9/16;
+    display: block;
+    background: #000;
+  }
   .voice-list { margin-top: 1rem; }
   .voice-box {
     background: var(--card);
@@ -194,6 +213,27 @@
       <div class="game-card-body">
         <h3>自転車がずらり</h3>
         <p>近所から自転車で来てくれた子もたくさんいました。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top: 0;">
+  <h2>動画で見る</h2>
+  <p style="color: var(--text-soft); font-size: 0.95rem;">音が出ます。お顔はぼかしています。</p>
+  <div class="video-grid">
+    <div class="video-card">
+      <video src="reel-1018-jenga.mp4" poster="reel-1018-jenga.jpg" controls playsinline preload="none"></video>
+      <div class="game-card-body">
+        <h3>ジェンガ</h3>
+        <p>積んで、積んで、最後は崩れる瞬間まで。</p>
+      </div>
+    </div>
+    <div class="video-card">
+      <video src="reel-1018-cardline.mp4" poster="reel-1018-cardline.jpg" controls playsinline preload="none"></video>
+      <div class="game-card-body">
+        <h3>カードライン 動物編</h3>
+        <p>動物のカードを大きさや重さの順に並べていくゲーム。19分を早送りで。</p>
       </div>
     </div>
   </div>
